@@ -15,7 +15,7 @@
 /*
 !.gitignore
 !wp-content/
-
+!.htaccess
 # Ignore everything in the "wp-content" directory, except the "plugins"
 # and "themes" directories.
 wp-content/*
@@ -27,6 +27,10 @@ wp-content/*
 wp-content/plugins/*
 # !wp-content/plugins/my-single-file-plugin.php
 # !wp-content/plugins/my-directory-plugin/
+!wp-content/plugins/google-analytics-for-wordpress/
+!wp-content/plugins/contact-form-7/
+!wp-content/plugins/rss-in-page/
+
 
 # Ignore everything in the "themes" directory, except the themes you
 # specify (see the commented-out example for a hint on how to do this.)

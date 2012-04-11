@@ -2,6 +2,7 @@
   <?php roots_content_before(); ?>
     <div id="content" class="<?php echo CONTAINER_CLASSES; ?>">
     <?php roots_main_before(); ?>
+      <?php if($post->post_name == 'news') ?>
       <div id="main" class="<?php echo MAIN_CLASSES; ?>" role="main">
         <?php roots_loop_before(); ?>
         <?php get_template_part('loop', 'page'); ?>

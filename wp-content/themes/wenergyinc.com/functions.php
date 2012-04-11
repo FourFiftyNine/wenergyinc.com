@@ -42,8 +42,10 @@ function roots_setup() {
 
   // http://codex.wordpress.org/Function_Reference/register_nav_menus
   register_nav_menus(array(
-    'primary_navigation' => __('Primary Navigation', 'roots')
+    'primary_navigation' => __('Primary Navigation', 'roots'),
+    'footer_navigation' => __('Footer Navigation', 'roots')
   ));
+
 }
 
 add_action('after_setup_theme', 'roots_setup');
@@ -73,4 +75,99 @@ add_action('widgets_init', 'roots_register_sidebars');
 function roots_entry_meta() {
   echo '<time class="updated" datetime="'. get_the_time('c') .'" pubdate>'. sprintf(__('Posted on %s at %s.', 'roots'), get_the_date(), get_the_time()) .'</time>';
   echo '<p class="byline author vcard">'. __('Written by', 'roots') .' <a href="'. get_author_posts_url(get_the_author_meta('id')) .'" rel="author" class="fn">'. get_the_author() .'</a></p>';
+}
+
+// BEGIN MY FUNCTIONS
+
+// OLD GET NAV
+function get_sidenav($post) {
+  if ($post->post_parent) {
+      $ancestors = get_post_ancestors($post->ID);
+      $root      = count($ancestors)-1;
+      $parent    = $ancestors[$root];
+  } else {
+      $parent = $post->ID;
+  }
+  // $meta = get_post_meta($parent, 'title');
+  $children = wp_list_pages("title_li=&child_of=". $parent ."&echo=0");
+  $sidenav = '';
+  if ($children) {
+  $sidenav .= '<nav id="sidenav">
+      <ul>
+        <li><a>' . get_the_title($parent) . '</a></li>'
+        . $children .
+      '</ul>
+  </nav>';
+  }
+
+  return $sidenav;
+}
+
+// function custom_excerpt_length( $length ) {
+//   return 25;
+// }
+// add_filter( 'excerpt_length', 'custom_excerpt_length', 999 );
+
+// excerpt more link
+function new_excerpt_more($more) {
+       global $post;
+  return ' <a href="'. get_permalink($post->ID) . '">Read More...</a>';
+}
+add_filter('excerpt_more', 'new_excerpt_more');
+
+function dump($var) {
+  $s  = '<pre>';
+  $s .= var_dump($var);
+  $s .= '</pre>';
+
+  return $s;
+}
+
+class Excerpt {
+
+  // Default length (by WordPress)
+  public static $length = 55;
+
+  // So you can call: my_excerpt('short');
+  public static $types = array(
+      'short' => 25,
+      'regular' => 55,
+      'long' => 100
+    );
+
+  /**
+   * Sets the length for the excerpt,
+   * then it adds the WP filter
+   * And automatically calls the_excerpt();
+   *
+   * @param string $new_length 
+   * @return void
+   * @author Baylor Rae'
+   */
+  public static function length($new_length = 55) {
+    Excerpt::$length = $new_length;
+
+    add_filter('excerpt_length', 'Excerpt::new_length');
+
+    Excerpt::output();
+  }
+
+  // Tells WP the new length
+  public static function new_length() {
+    if( isset(Excerpt::$types[Excerpt::$length]) )
+      return Excerpt::$types[Excerpt::$length];
+    else
+      return Excerpt::$length;
+  }
+
+  // Echoes out the excerpt
+  public static function output() {
+    the_excerpt();
+  }
+
+}
+
+// An alias to the class
+function my_excerpt($length = 55) {
+  Excerpt::length($length);
 }

@@ -1,0 +1,1137 @@
+/*
+ * HTML5 Boilerplate
+ *
+ * What follows is the result of much research on cross-browser styling.
+ * Credit left inline and big thanks to Nicolas Gallagher, Jonathan Neal,
+ * Kroc Camen, and the H5BP dev community and team.
+ *
+ * Detailed information about this CSS: h5bp.com/css
+ *
+ * ==|== normalize ==========================================================
+ */
+
+article, aside, details, figcaption, figure, footer, header, hgroup, nav, section { display: block; }
+audio, canvas, video { display: inline-block; *display: inline; *zoom: 1; }
+audio:not([controls]) { display: none; }
+[hidden] { display: none; }
+
+html { font-size: 100%; -webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%; }
+html, button, input, select, textarea { font-family: 'MuseoSans500', sans-serif; color: #222; }
+body { margin: 0; font-size: 12px; line-height: 20px; }
+
+::-moz-selection { background: @darkGrey; color: #fff; text-shadow: none; }
+::selection { background: @darkGrey; color: #fff; text-shadow: none; }
+
+a { color: #00e; }
+a:hover { color: #06e; }
+a:focus { outline: thin dotted; }
+a:hover, a:active { outline: 0; }
+
+abbr[title] { border-bottom: 1px dotted; }
+b, strong { font-weight: bold; }
+blockquote { margin: 1em 40px; }
+dfn { font-style: italic; }
+hr { display: block; height: 1px; border: 0; border-top: 1px solid #ccc; margin: 1em 0; padding: 0; }
+ins { background: #ff9; color: #000; text-decoration: none; }
+mark { background: #ff0; color: #000; font-style: italic; font-weight: bold; }
+pre, code, kbd, samp { font-family: monospace, serif; _font-family: 'courier new', monospace; font-size: 1em; }
+pre { white-space: pre; white-space: pre-wrap; word-wrap: break-word; }
+q { quotes: none; }
+q:before, q:after { content: ""; content: none; }
+small { font-size: 85%; }
+sub, sup { font-size: 75%; line-height: 0; position: relative; vertical-align: baseline; }
+sup { top: -0.5em; }
+sub { bottom: -0.25em; }
+ul, ol { margin: 1em 0; padding: 0 0 0 40px; }
+dd { margin: 0 0 0 40px; }
+nav ul, nav ol { list-style: none; list-style-image: none; margin: 0; padding: 0; }
+img { border: 0; -ms-interpolation-mode: bicubic; vertical-align: middle; }
+svg:not(:root) { overflow: hidden; }
+figure { margin: 0; }
+
+form { margin: 0; }
+fieldset { border: 0; margin: 0; padding: 0; }
+label { cursor: pointer; }
+legend { border: 0; *margin-left: -7px; padding: 0; white-space: normal; }
+button, input, select, textarea { font-size: 100%; margin: 0; vertical-align: baseline; *vertical-align: middle; }
+button, input { line-height: normal; }
+button, input[type="button"], input[type="reset"], input[type="submit"] { cursor: pointer; -webkit-appearance: button; *overflow: visible; }
+button[disabled], input[disabled] { cursor: default; }
+input[type="checkbox"], input[type="radio"] { box-sizing: border-box; padding: 0; *width: 13px; *height: 13px; }
+input[type="search"] { -webkit-appearance: textfield; -moz-box-sizing: content-box; -webkit-box-sizing: content-box; box-sizing: content-box; }
+input[type="search"]::-webkit-search-decoration, input[type="search"]::-webkit-search-cancel-button { -webkit-appearance: none; }
+button::-moz-focus-inner, input::-moz-focus-inner { border: 0; padding: 0; }
+textarea { overflow: auto; vertical-align: top; resize: vertical; }
+input:valid, textarea:valid {  }
+input:invalid, textarea:invalid { background-color: #f0dddd; }
+
+table { border-collapse: collapse; border-spacing: 0; }
+td { vertical-align: top; }
+
+.chromeframe { margin: 0.2em 0; background: #ccc; color: black; padding: 0.2em 0; }
+
+
+/* ==|== primary styles =====================================================
+   Author: Anthony Sessa - fourfiftynine.com
+   ========================================================================== */
+
+/* =============================================================================
+  Bootstrap mixins
+  ========================================================================== */
+@import "mixins.less"; 
+
+/* =============================================================================
+  Colors
+  ========================================================================== */
+@white:       #fff;
+@offWhite:    #f4f3f3;
+@darkGrey:    #464646;
+@lightGrey:   #bebebe;
+@lighterGrey: #e4e6e9;
+@orange:      rgb(255, 128, 0);
+@darkOrange:  #ff8853;
+@red:         #ae2b28;
+.orangeA() {
+    background: #FF7F00;
+    background: rgba(255, 128, 0, .85);
+}
+
+/* =============================================================================
+   Base
+   ========================================================================== */
+
+body {
+    background: @offWhite;
+    font-size: 13px;
+}
+a,a:visited {
+  color: @orange;
+  text-decoration: none;
+}
+a:hover {
+  color: @darkGrey;
+}
+
+.container {
+  margin: 0 auto;
+  width: 960px;
+}
+
+/* =============================================================================
+   Typeface
+   ========================================================================== */
+h1, h2, h3, h4, h5, h6 {
+    font-weight: 500;
+}
+h1 {
+    font-size: 26px;
+    color: @darkGrey;
+}
+
+h2 {
+    font-size: 18px;
+}
+/* =============================================================================
+   Inputs
+   ========================================================================== */
+label {
+    color: @lighterGrey;
+}
+input[type="text"], textarea {
+    border: 1px solid @lighterGrey;
+}
+input[type="text"] {
+    line-height: 20px;
+    height: 20px;
+}
+
+
+/* =============================================================================
+   Logo
+   ========================================================================== */
+.brand {
+    background: url(../img/logo.png) no-repeat center center;
+    display: block;
+    float: left;
+    width: 300px;
+    height: 52px;
+    text-indent: -999999px;
+    &:hover {
+        .opacity(80);
+    }
+}
+#banner .brand {
+    position: relative;
+    top: 25px;
+    padding-left: 30px;
+}
+
+/* =============================================================================
+   Social Nav
+   ========================================================================== */
+nav.social {
+    &.white {
+        width: 180px;
+
+        a {
+            background: url(../img/social-sprite-white.png) no-repeat;
+        }
+    }
+    h2 {
+        float: left;
+        font-size: 14px;
+        display: inline-block;
+        margin: 0;
+        position: relative;
+        top: -2px;
+    }
+    li {
+        float: right;
+        margin-right: 5px;
+
+        a {
+            background: url(../img/social-sprite.png) no-repeat;
+            display: block;
+            height: 12px;
+            width: 20px;
+            &:hover {
+                .opacity(70);
+            }
+            
+        }
+
+        a.youtube {
+
+        }
+        a.facebook {
+            background-position: -52px 0;
+        }
+        a.twitter {
+            background-position: -76px 0;
+        }
+        a.linkedin {
+            background-position: -29px 0;
+        }
+
+        a span {
+            float: left;
+            text-indent: -99999px;
+        }
+    }   
+}
+
+/* =============================================================================
+   Buttons
+   ========================================================================== */
+.btn {
+    display: inline-block;
+    font-size: 14px;
+    height: 30px;
+    line-height: 30px;
+    padding: 0 10px;
+    &.orange {
+        .orangeA();
+        color: @white;
+        &:hover {
+            background-color: @darkGrey;
+        }
+
+        &:active {
+
+        }
+    }
+
+    &.small {
+
+    }
+
+}
+/* =============================================================================
+   Header
+   ========================================================================== */
+header {
+    position: relative;
+    z-index: 2;
+}
+#banner {
+    height: 100px;
+    background: url(../img/bg-header.png) repeat-x;
+    .box-shadow();
+    .container {
+        border-right: 1px solid @lighterGrey;
+        border-left: 1px solid @lighterGrey;
+    }
+    nav#nav-main {
+        height: 100px;
+        float: left;
+        position: relative;
+        >ul>li {
+            display: inline-block;
+            float: left;
+        }
+        a,a:visited {
+            background: url(../img/bg-nav-sprite.png) repeat-x;
+            border-right: 1px solid @lighterGrey;
+            // border-bottom: 7px solid @lighterGrey;
+            color: @darkGrey;
+            display: block;
+            float: left;
+            height: 100px;
+            line-height: 110px;
+            font-size: 15px;
+            padding: 0 15px;
+
+            &:hover {
+                color: @orange;
+            }
+        }
+        a:hover, li.current-menu-item a, li.current-menu-parent a {
+            background-position: 0 -104px;
+        }
+        // .menu-investor-relations {
+        //     width: 191px;
+        // }
+        // >ul>li.menu-about {
+        //     width: 100px;
+        // }
+        .menu-about a {
+            border-left: 1px solid @lighterGrey;
+        }
+        .sub-menu {
+            .clearfix();
+            .box-shadow(2px 1px 4px rgba(0,0,0,.25));
+            display: none;
+            position: absolute;
+            top: 100px;
+            left: 0;
+            width: 230px;
+            
+            a,a:visited {
+                border-bottom: 1px solid @lighterGrey;
+                font-size: 14px;
+                height: 35px;
+                line-height: 35px;
+                width: 200px;
+            }
+        }
+        .menu-investor-relations .sub-menu {
+            left: 73px; // width of about navigation link
+        }
+        li:hover .sub-menu {
+            display: block;
+        }
+    }
+    .navbar-inner {
+        // border-bottom: 1px solid @lighterGrey;
+    }
+
+    #search-and-social {
+        float: left;
+        margin-left: 25px;
+        margin-top: 20px;
+        width: 207px;
+    }
+}
+
+/* IE 7 & 8 */
+// .lt-ie9 #banner nav#nav-main {
+//     .menu-investor-relations {
+//         width: 192px;
+//     }
+// }
+
+/*body { padding-top: 60px; }*/
+body.admin-bar .navbar-fixed-top { top: 28px; }
+
+
+
+/* =============================================================================
+   Content
+   ========================================================================== */
+
+#content {
+    .container();
+    .clearfix(); // TODO move into template?
+
+
+    article {
+
+        h1 {
+            margin: 20px 20px 15px;
+            padding-bottom: 10px;
+            border-bottom: 1px solid @lightGrey;
+        }
+        h2 {
+            margin: 10px 20px 0px;
+            a {
+                color: @darkGrey;
+                &:hover {
+                    text-decoration: underline;
+                }
+            }
+
+        }
+
+        time {
+            color: @orange;
+            font-size: 11px;
+            margin: 0 20px 5px;
+        }
+        p {
+            &.author {
+                display: none;
+            }
+            margin: 5px 20px 10px;
+        }
+    }
+    aside {
+        float: left;
+        width: 300px;
+    }
+    #main {
+        width: 630px;
+        float: right;
+        article {
+            border: 1px solid @lighterGrey;
+        }
+
+        &.no-children {
+            width: 100%;
+        }
+    }
+}
+
+
+#sidenav {
+    ul li {
+        border: 1px solid @lighterGrey;
+        display: block;
+        margin-bottom: 15px;
+
+        a {
+            color: @darkGrey;
+            display: block;
+            font-size: 15px;
+            height: 35px;
+            line-height: 38px;
+            padding-left: 20px;
+            border-bottom: 5px solid @lighterGrey;
+
+
+        }
+        a:hover, &.current-menu-item a {
+            background-color: @offWhite;
+            color: @orange;
+        }
+        a:hover {
+            .box-shadow();
+        }
+    }
+}
+
+/* ============================================
+    Content Blocks
+   ========================================= */
+.block {
+    border: 1px solid @lightGrey;
+    position: relative;
+
+    header {
+        h1 {
+            a {
+                color: @darkGrey;
+
+                &:hover {
+                    color: @orange;
+                }
+            }
+        }
+    }
+
+    article {
+        border-top: 1px solid @lightGrey;
+        &.first {
+            border-top: none;
+        }
+        header h2 {
+            margin: 20px 20px;
+        }
+
+        p {
+            margin: 15px 20px 20px;
+            font-size: 11px;
+            line-height: 14px;
+        }
+    }
+}
+.lt-ie9 .block header h2 { font-size: 17px; }
+section {
+    &#news {
+        float: left;
+        width: 300px;
+        height: 334px;
+
+        h1 {
+            margin: 0;
+            padding: 20px 20px;
+            border-bottom: 1px solid #bebebe;
+            margin: 0;
+            padding: 0 20px;
+            height: 45px;
+            line-height: 45px;
+            background-color: @offWhite;
+            border: none;
+            border-bottom: 1px solid @lightGrey;
+            .box-shadow(0 0 15px @lighterGrey inset);
+        }
+        article {
+            h2 {
+                margin: 10px 20px;
+            }
+            border-top: none;
+
+            p {
+                font-size: 13px;
+                line-height: 20px;
+                margin-top: 5px;
+                margin-bottom: 5px;
+            }
+        }
+
+        a.btn {
+            // position: ;
+            position: absolute;
+            right: 0px;
+            bottom: 0px;
+            height: 35px;
+            line-height: 35px;
+            padding: 0 25px;
+        }
+    }
+}
+
+/* ============================================
+    Frontpage (Home)
+   ========================================= */
+body.home {
+    #press-releases {
+        width: 630px;
+        height: 229px;
+        float: right;
+        h1 {
+            margin: 0;
+            padding: 0 20px;
+            height: 45px;
+            line-height: 45px;
+            background-color: @offWhite;
+            border: none;
+            border-bottom: 1px solid @lightGrey;
+            .box-shadow(0 0 15px @lighterGrey inset);
+        }
+        h2 a {
+            color: @orange;
+        }
+        article {
+            border-top: none;
+            p {
+                font-size: 13px;
+                line-height: 20px;
+            }
+
+        }
+        a.btn {
+            float: right;
+            position: absolute;
+            right:0px;
+            bottom: 0px;
+            height: 35px;
+            line-height: 35px;
+            padding: 0px;
+            text-align: center;
+            width: 122px;
+        }
+    }
+    #content {
+
+    }
+    #content #main {
+        border: 1px solid @lighterGrey;
+        width: 100%;
+        float: none;
+        position: relative;
+        .contact-us {
+            height: 35px;
+            line-height: 35px;
+            padding: 0 25px;
+            position: absolute;
+            right: 0;
+            bottom: 0;
+        }
+        article {
+            background-color: @offWhite;
+            border: none;
+            border-right: 1px solid @lighterGrey;
+            .box-shadow(0 0 30px @lighterGrey inset);
+            float: left;
+            height: 268px;
+            width: 329px;
+
+            header {
+                margin-bottom: 20px;
+            }
+
+            p {
+                line-height: 22px;
+                font-size: 14px;
+            }
+        }
+        #welcome-image {
+            float: right;
+            height: 268px;
+            width: 630px;
+        }
+    }
+    aside#companies {
+        border: none;
+        h2 {
+            height: 30px;
+            line-height: 30px;
+            padding: 0 5px;
+            margin-bottom: -1px;
+            margin-top: 0;
+        }
+        h3 {
+            font-size: 15px;
+            margin: 2px;
+            position: relative;
+            top: 2px;
+        }
+
+        .company {
+            border: 1px solid @lightGrey;
+            background-color: @offWhite;
+            .box-shadow(0 0 30px @lighterGrey inset);
+            color: @darkGrey;
+            display: block;
+            height: 80px;
+            position: relative;
+            overflow: hidden;
+            margin-top: 8px;
+            .img {
+                background-color: @white;
+                height: 51px;
+                line-height: 51px;
+                width: 298px;
+            }
+                img {
+                    padding-left: 20px;
+                    width: 200px;
+                }
+            &.cns-wellness img {
+                padding-left: 0;
+            }
+            &:hover {
+                border: 1px solid @darkGrey;
+                .box-shadow();
+            }
+            &:active {
+                position: relative;
+                top: 1px;
+            }
+
+            .name {
+                font-size: 14px;
+                border-top: 1px solid @lightGrey;
+                padding: 5px 15px 0;
+            }
+            .website {
+                float: left;
+            }
+            .more {
+                font-size: 12px;
+                color: @orange;
+                float: right;
+            }
+
+            &:first-child {
+                margin-top: 30px;
+                margin-bottom: 5px;
+            }
+        }
+    }
+}
+
+/* ============================================
+    Third Row - PR, StockTwits, Twitter
+   ========================================= */
+.blockHeader() {
+    header h1 {
+
+        margin: 0;
+        padding: 0 20px;
+        height: 45px;
+        line-height: 45px;
+        background-color: @offWhite;
+        border: none;
+        border-bottom: 1px solid @lightGrey;
+        .box-shadow(0 0 15px @lighterGrey inset);
+    }
+}
+.row {
+    margin-top: 30px;
+}
+#third {
+    #youtube {
+        .blockHeader();
+        article {
+            h3 {
+                margin-bottom: 5px;
+            }
+            border-top: none;
+            text-align: center;
+            a {
+                overflow: hidden;
+                display: block;
+                margin-bottom: 10px;
+                height: 99px;
+                &:first-child {
+                    margin-top: 0px;
+                }
+                img {
+                    width: 195px;
+                    position: relative;
+                    top: -22px;
+                }
+            }
+        }
+    }
+    .block {
+        width: 298px
+    }
+    #stocktwits {
+        width: 300px;
+    }
+    #StockTwits_wrapper {
+        border: 1px solid @lightGrey !important;
+
+        .stModuleHeader {
+            background: @white;
+            margin: 0;
+            border-bottom: 1px solid @lightGrey;
+            height: 60px;
+            line-height: 60px;
+            padding: 0;
+            .stTitle {
+                color: #464646;
+                font-family: 'MuseoSans500';
+                height: 60px;
+                line-height: 60px;
+                padding: 0 20px;
+                font-size: 26px;
+                font-weight: 500;
+            }
+        }
+    }
+    aside {
+        float: left;
+        margin-left: 30px;
+
+        &:first-child {
+            margin-left: 0;
+        }
+    }
+    #twitter {
+        border: 1px solid @lightGrey;
+        width: 298px;
+        .blockHeader();
+    }
+    .twtr-widget {
+        
+        .twtr-ft div {
+            display: none;
+        }
+
+        .twtr-hd {
+            display: none;
+        }
+    }
+
+
+}
+
+/* ============================================
+    Search & Search Form
+   ========================================= */
+#searchform {
+    clear: both;
+    margin-top: 17px;
+    #s {
+        border: 1px solid @lighterGrey;
+        color: @darkGrey;
+        font-size: 12px;
+        height: 20px;
+        width: 170px;
+    }
+    #searchsubmit {
+        background: @orange;
+        border: none;
+        color: @white;
+        font-size: 10px;
+        padding: 6px 4px 5px;
+        text-transform: uppercase;
+
+        &:hover {
+          background: @darkGrey;
+        }
+    }
+}
+
+body.search {
+    #main {
+        article {
+            margin-bottom: 20px;
+        }
+    }
+}
+
+/* ============================================
+    Stock Chart Page
+   ========================================= */
+body.stock-information {
+    object {
+        margin-top: 10px;
+        margin-left: 15px;
+        margin-bottom: 0;
+    }
+}
+
+/* ============================================
+    All Archive/Category Pages
+   ========================================= */
+body.archive {
+    article {
+        margin-top: 20px;
+
+        &.first {
+            margin-top: 0;
+        }
+    }
+}
+/* ============================================
+    News
+   ========================================= */
+body.news {
+    #content {
+        #main {
+            width: 100%;
+        }
+    }
+}
+
+body.news.single {
+    #content {
+        #main {
+            // width: 630px;
+        }
+    }
+}
+
+body.board-of-directors,
+body.management {
+    #content {
+        #main {
+            strong {
+                font-size: 18px;
+                margin: 25px 0 -5px;
+                display: block;
+            }
+        }
+    }
+}
+/* ============================================
+    FAQ Page
+   ========================================= */
+body.faq {
+    strong {
+        font-size: 18px;
+        font-weight: 500;
+        color: @orange;
+    }
+}
+/* ============================================
+    FAQ Page
+   ========================================= */
+body.sec-filings {
+    #main {
+        ul {
+            padding: 20px;
+        }
+        li {
+            list-style: none;
+            padding-bottom: 20px;
+            margin-bottom: 20px;
+            border-bottom: 1px solid @lighterGrey;
+            b {
+
+                padding: 0 2px 0 10px;
+            }
+        }
+    }
+}
+/* ============================================
+    Contact Page
+   ========================================= */
+body.contact,
+body.ir-contact {
+    #content {
+
+    }
+    span.wpcf7-not-valid-tip {
+        top: -3px;
+        left: 260px;
+    }
+    div.wpcf7-validation-errors {
+        border-color: @red;
+    }
+    .your-message {
+        span.wpcf7-not-valid-tip {
+            top: 50%;
+            left: 50%;
+        }
+    }
+    input, textarea {
+        &.wpcf7-not-valid {
+            border: 1px solid @red;
+        }
+    }
+    .form {
+        float: left;
+    }
+    .address {
+        float: right;
+        margin-top: 15px;
+        margin-right: 40px;
+        color: @lightGrey;
+        h2 {
+            color: @darkGrey;
+        }
+    }
+    .wpcf7-form {
+        .clearfix();
+        input[type="submit"] {
+            float: right;
+            line-height: 30px;
+            border: none;
+            height: 30px;
+            padding: 0 20px;
+        }
+        .message {
+            clear: both;
+            textarea {
+                width: 100%;
+            }
+        }
+    }
+}
+/* ============================================
+    404 Page
+   ========================================= */
+body.error404 {
+    #content {
+        #main {
+            margin: 0 auto;
+            float: none;    
+        }
+    }
+}
+
+
+/* =============================================================================
+   Primary Content
+   ========================================================================== */
+#wrap {
+   padding: 30px 0;
+   position: relative;
+   z-index: 1;
+   background: @white;
+}
+
+#main {
+}
+
+
+
+/* =============================================================================
+   Sidebar
+   ========================================================================== */
+
+#sidebar { }
+
+
+
+/* =============================================================================
+   Posts
+   ========================================================================== */
+
+.hentry header { }
+.hentry h2 a { text-decoration: none; }
+.hentry time { display: block; }
+.hentry p.byline { }
+.hentry footer { clear: both; }
+
+
+
+/* =============================================================================
+   Post Comments
+   ========================================================================== */
+
+#comments, #respond, #submit { clear: both; display: none; }
+ol.commentlist img.avatar { float: left; margin-right: 10px; }
+
+
+
+/* =============================================================================
+   Footer
+   ========================================================================== */
+footer {
+
+    header {
+        background-color: #787878;
+        height: 40px;
+        .form-search {
+            float: left;
+            margin-top: 0 !important;
+            position: relative;
+            top: 8px;
+        }
+
+        nav.social {
+            float: right;
+            position: relative;
+            top: 15px;
+        }
+    }
+    .col {
+        float: left;
+    }
+    .menu > li {
+        float: left;
+        margin-left: 45px;
+        width: 155px;
+        &:first-child {
+            margin-left: 100px;
+        }
+        .sub-menu li a {
+            color: #787878;
+            display: block;
+            margin-bottom: 15px;
+
+            &:hover {
+                color: @orange;
+            }
+        }
+    }
+    .menu > li > a {
+        display: block;
+        color: @darkGrey;
+        font-size: 15px;
+        margin-bottom: 20px;
+    }
+    #main-footer {
+        padding: 40px 0;
+
+        .brand {
+            float: none;
+            height: 62px;
+            background-position: center top;
+            border-bottom: 1px solid #787878;
+            padding-bottom: 40px;
+        }
+
+        .contact-info {
+            color: @darkGrey;
+        }
+    }
+
+    .copy {
+        float: right;
+        color: @darkGrey;
+        margin-top: 150px;
+    }
+}
+
+#content-info {
+    color: #ffffff;
+}
+
+#content-info p small { font-size: 13px; }
+
+
+
+/* =============================================================================
+   WordPress Generated Classes
+   See: http://codex.wordpress.org/CSS#WordPress_Generated_Classes
+   ========================================================================== */
+
+.aligncenter { display: block; margin: 0 auto; }
+.alignleft { margin: 0 20px 20px 0; float: left; }
+.alignright { margin: 0 0 20px 20px; float: right; }
+.container {
+  width: 960px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* ==|== media queries ======================================================
+   EXAMPLE Media Query for Responsive Design.
+   This example overrides the primary ('mobile first') styles
+   Modify as content requires.
+   ========================================================================== */
+
+@media only screen and (min-width: 35em) {
+  /* Style adjustments for viewports that meet the condition */
+}
+
+
+
+/* ==|== non-semantic helper classes ======================================== */
+
+.ir { display: block; border: 0; text-indent: -999em; overflow: hidden; background-color: transparent; background-repeat: no-repeat; text-align: left; direction: ltr; *line-height: 0; }
+.ir br { display: none; }
+.hidden { display: none !important; visibility: hidden; }
+.visuallyhidden { border: 0; clip: rect(0 0 0 0); height: 1px; margin: -1px; overflow: hidden; padding: 0; position: absolute; width: 1px; }
+.visuallyhidden.focusable:active, .visuallyhidden.focusable:focus { clip: auto; height: auto; margin: 0; overflow: visible; position: static; width: auto; }
+.invisible { visibility: hidden; }
+.clearfix:before, .clearfix:after { content: ""; display: table; }
+.clearfix:after { clear: both; }
+.clearfix { *zoom: 1; }
+
+
+
+/* ==|== print styles ======================================================= */
+
+@media print {
+  * { background: transparent !important; color: black !important; box-shadow:none !important; text-shadow: none !important; filter:none !important; -ms-filter: none !important; }
+  a, a:visited { text-decoration: underline; }
+  a[href]:after { content: " (" attr(href) ")"; }
+  abbr[title]:after { content: " (" attr(title) ")"; }
+  .ir a:after, a[href^="javascript:"]:after, a[href^="#"]:after { content: ""; }
+  pre, blockquote { border: 1px solid #999; page-break-inside: avoid; }
+  thead { display: table-header-group; }
+  tr, img { page-break-inside: avoid; }
+  img { max-width: 100% !important; }
+  @page { margin: 0.5cm; }
+  p, h2, h3 { orphans: 3; widows: 3; }
+  h2, h3 { page-break-after: avoid; }
+}

@@ -8,9 +8,11 @@
 <?php } ?>
 
 <?php /* Start loop */ ?>
+<?php $count = 1; ?>
 <?php while (have_posts()) : the_post(); ?>
+  <?php $class = ($count==1) ? ' first' : ''; ?>
   <?php roots_post_before(); ?>
-    <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
+    <article id="post-<?php the_ID(); ?>" <?php post_class($class); ?>>
     <?php roots_post_inside_before(); ?>
       <header>
         <h2><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h2>
@@ -18,7 +20,7 @@
       </header>
       <div class="entry-content">
         <?php if (is_archive() || is_search()) { ?>
-          <?php the_excerpt(); ?>
+          <?php my_excerpt(100); ?>
         <?php } else { ?>
           <?php the_content(); ?>
         <?php } ?>
@@ -29,6 +31,7 @@
     <?php roots_post_inside_after(); ?>
     </article>
   <?php roots_post_after(); ?>
+  <?php $count++; ?>
 <?php endwhile; /* End loop */ ?>
 
 <?php /* Display navigation to next/previous pages when applicable */ ?>
