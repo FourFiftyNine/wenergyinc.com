@@ -443,7 +443,8 @@ header#banner {
   float: left;
 }
 #banner nav#nav-main ul.menu > li:hover,
-#banner nav#nav-main ul.menu > li.current-menu-parent {
+#banner nav#nav-main ul.menu > li.current-menu-parent,
+#banner nav#nav-main ul.menu > li.current-menu-item {
   background: url('../img/nav-active-semicircle.png') no-repeat 34% bottom;
 }
 #banner nav#nav-main ul.menu > li > a,
@@ -451,6 +452,10 @@ header#banner {
   background: url(../img/bg-nav-sprite.png) no-repeat;
   background-position: right -34px;
   padding: 0 31px 0 4px;
+}
+#banner nav#nav-main ul.menu > li > a.active,
+#banner nav#nav-main ul.menu > li > a:visited.active {
+  color: #7b2353;
 }
 #banner nav#nav-main ul.menu > li.parent {
   position: relative;

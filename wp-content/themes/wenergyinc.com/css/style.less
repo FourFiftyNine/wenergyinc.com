@@ -290,7 +290,8 @@ header#banner {
             display: inline-block;
             float: left;
             &:hover,
-            &.current-menu-parent {
+            &.current-menu-parent,
+            &.current-menu-item {
                 background: url('../img/nav-active-semicircle.png') no-repeat 34% bottom;
             }
 
@@ -299,6 +300,9 @@ header#banner {
                 background: url(../img/bg-nav-sprite.png) no-repeat;
                 background-position: right -34px;
                 padding: 0 31px 0 4px;
+                &.active {
+                    color: @purple;
+                }
 
             }
 

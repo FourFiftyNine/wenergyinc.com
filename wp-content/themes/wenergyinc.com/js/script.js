@@ -6,9 +6,11 @@ jQuery(document).ready(function() {
     $("ul.sub-menu").parents('li').addClass('parent').append('<span class="arrow"></span>');
     $("ul.sub-menu").hover(function() {
         $(this).parents('li').addClass('active');
+        $(this).siblings('a').addClass('active');
     },
     function(){
         $(this).parents('li').removeClass('active');
+        $(this).siblings('a').removeClass('active');
     });
 });
 
