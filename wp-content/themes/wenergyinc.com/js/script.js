@@ -3,6 +3,13 @@
 */
 jQuery(document).ready(function() {
     addWmodeTransparent();
+    $("ul.sub-menu").parents('li').addClass('parent').append('<span class="arrow"></span>');
+    $("ul.sub-menu").hover(function() {
+        $(this).parents('li').addClass('active');
+    },
+    function(){
+        $(this).parents('li').removeClass('active');
+    });
 });
 
 function addWmodeTransparent() {

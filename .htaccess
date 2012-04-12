@@ -557,9 +557,9 @@ AddCharset utf-8 .css .js .xml .json .rss .atom
 RewriteEngine On
 RewriteBase /
 RewriteRule ^index\.php$ - [L]
-RewriteRule ^css/(.*) /wp-content/themes/wellnesscenterusa.biz/css/$1 [QSA,L]
-RewriteRule ^js/(.*) /wp-content/themes/wellnesscenterusa.biz/js/$1 [QSA,L]
-RewriteRule ^img/(.*) /wp-content/themes/wellnesscenterusa.biz/img/$1 [QSA,L]
+RewriteRule ^css/(.*) /wp-content/themes/wenergyinc.com/css/$1 [QSA,L]
+RewriteRule ^js/(.*) /wp-content/themes/wenergyinc.com/js/$1 [QSA,L]
+RewriteRule ^img/(.*) /wp-content/themes/wenergyinc.com/img/$1 [QSA,L]
 RewriteRule ^plugins/(.*) /wp-content/plugins/$1 [QSA,L]
 RewriteCond %{REQUEST_FILENAME} !-f
 RewriteCond %{REQUEST_FILENAME} !-d

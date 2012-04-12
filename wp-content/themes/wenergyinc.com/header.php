@@ -19,8 +19,10 @@
   <link rel="alternate" type="application/rss+xml" title="<?php bloginfo('name'); ?> Feed" href="<?php echo home_url(); ?>/feed/">
 
   <script src="<?php echo get_template_directory_uri(); ?>/js/libs/modernizr-2.5.3.min.js"></script>
+
   <script src="//ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
   <script>window.jQuery || document.write('<script src="<?php echo get_template_directory_uri(); ?>/js/libs/jquery-1.7.1.min.js"><\/script>')</script>
+
   <!-- 
     <script type="text/javascript"
     src="http://www.google.com/jsapi">
@@ -45,29 +47,34 @@
   <!--[if lt IE 7]><p class="chromeframe">Your browser is <em>ancient!</em> <a href="http://browsehappy.com/">Upgrade to a different browser</a> or <a href="http://www.google.com/chromeframe/?redirect=true">install Google Chrome Frame</a> to experience this site.</p><![endif]-->
 
   <?php roots_header_before(); ?>
+    <div id="header-border"></div>
     <header id="banner" class="navbar" role="banner">
       <?php roots_header_inside(); ?>
-      <div class="navbar-inner">
-        <div class="<?php echo WRAP_CLASSES; ?> clearfix">
-
-          <a class="brand" href="<?php echo home_url(); ?>/">
-            <?php bloginfo('name'); ?>
-          </a>
-          <nav id="nav-main" class="" role="navigation">
-            <?php wp_nav_menu(array('theme_location' => 'primary_navigation')); ?>
+      <div class="<?php echo WRAP_CLASSES; ?> clearfix">
+        <a class="brand" href="<?php echo home_url(); ?>/">
+          <?php bloginfo('name'); ?>
+        </a>
+        <div id="search-and-social">
+          <nav class="social clearfix">
+            <ul>
+              <!-- <li><a class="linkedin" href="http://todo-url.com"><span>linknedin</span></a></li> -->
+              <li><a class="twitter" href="http://twitter.com/wenergyinc"><span>twitter</span></a></li>
+              <li><a class="facebook" href="http://www.facebook.com/WorthingtonEnergy"><span>facebook</span></a></li>
+              <li><a class="youtube" href="http://www.youtube.com/wenergyinc"><span>youtube</span></a></li>
+            </ul>
           </nav>
-          <div id="search-and-social">
-            <nav class="social clearfix">
-              <ul>
-                <!-- <li><a class="linkedin" href="http://todo-url.com"><span>linknedin</span></a></li> -->
-                <li><a class="twitter" href="https://twitter.com/#!/WCenterUSAInc"><span>twitter</span></a></li>
-                <li><a class="facebook" href="http://www.facebook.com/pages/Wellness-Center-USA-Inc/197989203645148"><span>facebook</span></a></li>
-                <li><a class="youtube" href="http://www.youtube.com/user/WellnessCenterUSAInc"><span>youtube</span></a></li>
-              </ul>
-            </nav>
-            <?php get_search_form() ?>
-          </div>
+          <?php get_search_form() ?>
         </div>
+        <div id="contact-info">
+          <p id="phone"><strong>T</strong>: (415) 529-3480</p>
+          <!-- <p id="fax"></p> -->
+          <p id="email"><strong>E</strong>: <a href="mailto:info@wenergyinc.com">info@wenergyinc.com</a></p>
+        </div>
+      </div>
+      <div id="nav-bar-container">
+        <nav id="nav-main" class="container" role="navigation">
+          <?php wp_nav_menu(array('theme_location' => 'primary_navigation')); ?>
+        </nav>
       </div>
     </header>
   <?php roots_header_after(); ?>

@@ -22,6 +22,7 @@ body { margin: 0; font-size: 12px; line-height: 20px; }
 ::-moz-selection { background: @darkGrey; color: #fff; text-shadow: none; }
 ::selection { background: @darkGrey; color: #fff; text-shadow: none; }
 
+*:focus { outline: none;}
 a { color: #00e; }
 a:hover { color: #06e; }
 a:focus { outline: thin dotted; }
@@ -85,10 +86,13 @@ td { vertical-align: top; }
   ========================================================================== */
 @white:       #fff;
 @offWhite:    #f4f3f3;
-@darkGrey:    #464646;
-@lightGrey:   #bebebe;
+@offBlack:    #232323;
+@grey:        #e0e0e0;
+@darkGrey:    #5c5c5c;
+@lightGrey:   #f6f6f6;
 @lighterGrey: #e4e6e9;
 @orange:      rgb(255, 128, 0);
+@purple:      #7b2353;
 @darkOrange:  #ff8853;
 @red:         #ae2b28;
 .orangeA() {
@@ -101,15 +105,16 @@ td { vertical-align: top; }
    ========================================================================== */
 
 body {
-    background: @offWhite;
+    background: @lightGrey;
+    color: @darkGrey;
     font-size: 13px;
 }
 a,a:visited {
-  color: @orange;
+  color: @offBlack;
   text-decoration: none;
 }
 a:hover {
-  color: @darkGrey;
+  color: @offBlack;
 }
 
 .container {
@@ -146,6 +151,8 @@ input[type="text"] {
 }
 
 
+
+
 /* =============================================================================
    Logo
    ========================================================================== */
@@ -153,18 +160,17 @@ input[type="text"] {
     background: url(../img/logo.png) no-repeat center center;
     display: block;
     float: left;
-    width: 300px;
-    height: 52px;
+    width: 315px;
+    height: 70px;
     text-indent: -999999px;
     &:hover {
-        .opacity(80);
+        .opacity(90);
     }
 }
 #banner .brand {
     position: relative;
-    top: 25px;
-    padding-left: 30px;
-}
+    top: 40px;
+    }
 
 /* =============================================================================
    Social Nav
@@ -249,74 +255,133 @@ nav.social {
 /* =============================================================================
    Header
    ========================================================================== */
-header {
+#header-border {
+    height: 6px;
+    background: url(../img/header-border.png) repeat-x;
+}
+header#banner {
+    background-color: @white;
     position: relative;
+
     z-index: 2;
 }
 #banner {
-    height: 100px;
-    background: url(../img/bg-header.png) repeat-x;
-    .box-shadow();
-    .container {
-        border-right: 1px solid @lighterGrey;
-        border-left: 1px solid @lighterGrey;
+    height: 155px;
+    &>.container {
+        background:  url(../img/bg-header-clouds.png) no-repeat left top;
+        height: 155px;
     }
+    #nav-bar-container {
+        border-top: 1px solid @grey;
+        height: 33px;
+        line-height: 33px;
+        background: url(../img/bg-nav-sprite.png) repeat-x;
+    }
+    // Navigation is pretty complex
     nav#nav-main {
-        height: 100px;
-        float: left;
-        position: relative;
-        >ul>li {
+        // height: 100px;
+        // clear: both;
+        // float: left;
+        // position: relative;
+        // Only want to focus on direct children of the main menu UL
+        ul.menu>li {
+
+            cursor: pointer;
             display: inline-block;
             float: left;
-        }
-        a,a:visited {
-            background: url(../img/bg-nav-sprite.png) repeat-x;
-            border-right: 1px solid @lighterGrey;
-            // border-bottom: 7px solid @lighterGrey;
-            color: @darkGrey;
-            display: block;
-            float: left;
-            height: 100px;
-            line-height: 110px;
-            font-size: 15px;
-            padding: 0 15px;
+            &:hover,
+            &.current-menu-parent {
+                background: url('../img/nav-active-semicircle.png') no-repeat 34% bottom;
+            }
 
-            &:hover {
-                color: @orange;
+            // Right Border for menu items without children
+            >a,>a:visited {
+                background: url(../img/bg-nav-sprite.png) no-repeat;
+                background-position: right -34px;
+                padding: 0 31px 0 4px;
+
+            }
+
+            &.parent {
+                position: relative;
+                > a, > a:visited {
+                    padding: 0 40px 0 15px;
+                    margin-left: -10px;
+                }
+                .arrow {
+                    background: url(../img/arrow-purple.png) no-repeat;
+                    position: absolute;
+                    right: 25px;
+                    top: 12px;
+                    height: 5px;
+                    width: 7px;
+                }
+            }
+
+            >a:hover, 
+            &.active a,
+            &.current-menu-item a, 
+            &.current-menu-parent a {
+                background-position: right -68px;
+            }
+            &.menu-home {
+                a {
+                    background: url(../img/btn-home.png) no-repeat right top;
+                    border-left: none;
+                    width: 30px;
+                    text-indent: -99999px;
+                }
+                .lt-ie9 a {
+                    text-indent: 0;
+                }
+                a:hover,
+                &.active a,
+                &.current-menu-item a, 
+                &.current-menu-parent a {
+                    background-position: right -34px;
+                }
             }
         }
-        a:hover, li.current-menu-item a, li.current-menu-parent a {
-            background-position: 0 -104px;
+
+        // TODO clean up and move to a more logical placement in file.
+        a,a:visited {
+            // border-right: 1px solid @grey;
+            // border-left: 1px solid @white;
+            color: @offBlack;
+            display: block;
+            float: left;
+            height: 33px;
+            line-height: 33px;
+            font-size: 13px;
+            text-transform: uppercase;
+
+            &:hover {
+                color: @purple;
+            }
+
         }
-        // .menu-investor-relations {
-        //     width: 191px;
-        // }
-        // >ul>li.menu-about {
-        //     width: 100px;
-        // }
-        .menu-about a {
-            border-left: 1px solid @lighterGrey;
-        }
+        
         .sub-menu {
             .clearfix();
+            background: @grey;
             .box-shadow(2px 1px 4px rgba(0,0,0,.25));
             display: none;
             position: absolute;
-            top: 100px;
-            left: 0;
+            top: 33px;
+            left: -13px;
             width: 230px;
             
             a,a:visited {
                 border-bottom: 1px solid @lighterGrey;
+                background: none;
+                padding: 0;
                 font-size: 14px;
                 height: 35px;
                 line-height: 35px;
                 width: 200px;
             }
         }
-        .menu-investor-relations .sub-menu {
-            left: 73px; // width of about navigation link
-        }
+
         li:hover .sub-menu {
             display: block;
         }
@@ -326,10 +391,24 @@ header {
     }
 
     #search-and-social {
-        float: left;
-        margin-left: 25px;
+        float: right;
         margin-top: 20px;
-        width: 207px;
+        // width: 250px;
+    }
+    #contact-info {
+        color: @offBlack;
+        clear: both;
+        float: right;
+        margin-top: 15px;
+        text-align: right;
+        font-size: 11.5px;
+        width: 145px; // Extra 5
+        p {
+            margin: 0px 0;
+        }
+        a:hover {
+            text-decoration: underline;
+        }
     }
 }
 
@@ -764,24 +843,36 @@ body.home {
    ========================================= */
 #searchform {
     clear: both;
+    float: right;
     margin-top: 17px;
+    position: relative;
     #s {
-        border: 1px solid @lighterGrey;
+        background-color: #f4f4f4;
+        border: 1px solid @grey;
+        .border-radius(30px);
+        padding-left: 15px;
         color: @darkGrey;
         font-size: 12px;
         height: 20px;
-        width: 170px;
+        width: 185px;
+        &:focus {
+        }
     }
     #searchsubmit {
-        background: @orange;
+        background: url(../img/search-button.png) no-repeat;
         border: none;
         color: @white;
         font-size: 10px;
+        height: 11px;
+        width: 13px;
         padding: 6px 4px 5px;
         text-transform: uppercase;
-
+        position: absolute;
+        right: 15px;
+        top: 5px;
+        text-indent: -999999px;
         &:hover {
-          background: @darkGrey;
+            .opacity(80);
         }
     }
 }
@@ -953,7 +1044,7 @@ body.error404 {
    padding: 30px 0;
    position: relative;
    z-index: 1;
-   background: @white;
+   // background: @white;
 }
 
 #main {

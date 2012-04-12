@@ -171,3 +171,15 @@ class Excerpt {
 function my_excerpt($length = 55) {
   Excerpt::length($length);
 }
+
+// add_filter('nav_menu_css_class', 'add_parent_class', 10, 2 );
+
+// function add_parent_class($classes, $item) {
+
+//   if(!$item->menu_item_parent) {
+//     $classes[] = 'parent';
+//     return $classes;
+//   }
+//   dump($item); exit;
+//   return $classes;
+// }
