@@ -1,6 +1,7 @@
-<div class="well">
+<aside id="sidebar">
+  SIDEBAR HERE
   <?php //dynamic_sidebar('roots-sidebar'); ?>
-  <?php  
+  <?php  /*
   // dump($post);
   $categories = get_the_category($post->ID);
   $catSlug = $categories[0]->slug;
@@ -26,4 +27,5 @@
         <?php wp_nav_menu(array('menu' => 'investor-relations')); ?>
     </nav>
   <?php endif; ?>
-</div>
+  */ ?>
+</aside>

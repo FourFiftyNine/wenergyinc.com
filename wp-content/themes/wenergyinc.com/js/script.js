@@ -12,6 +12,13 @@ jQuery(document).ready(function() {
         $(this).parents('li').removeClass('active');
         $(this).siblings('a').removeClass('active');
     });
+    $("li.parent .arrow").hover(function() {
+        $(this).parents('li').addClass('active');
+        $(this).siblings('a').addClass('active');
+    }, function() {
+        $(this).parents('li').removeClass('active');
+        $(this).siblings('a').removeClass('active');
+    });
 });
 
 function addWmodeTransparent() {
