@@ -1,4 +1,4 @@
-    <div id="third"  class="row clearfix container">
+<?php /*    <div id="third"  class="row clearfix container">
       <?php 
         $category = get_category_by_slug('news'); 
         $id = $category->term_id;
@@ -85,6 +85,7 @@
         </script>
       </aside>
     </div><!-- /#third --> 
+    */ ?>
   </div><!-- /#wrap -->
 
   <?php roots_footer_before(); ?>

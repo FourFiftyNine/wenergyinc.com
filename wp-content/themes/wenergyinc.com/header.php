@@ -7,7 +7,10 @@
   <meta charset="utf-8">
 
   <title><?php wp_title('|', true, 'right'); bloginfo('name'); ?></title>
-
+  <!--[if lt IE 9]>
+  <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+  <![endif]-->
+  
   <?php if(strstr($_SERVER['HTTP_USER_AGENT'],'iPhone')):?>
     <meta name="viewport" content="width=device-width, initial-scale=.29">
   <?php else: ?>
@@ -39,7 +42,6 @@
    -->
   <?php roots_head(); ?>
   <?php wp_head(); ?>
-
 </head>
 
 <body <?php body_class(roots_body_class()); ?>>

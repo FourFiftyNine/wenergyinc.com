@@ -19,8 +19,8 @@
         <?php roots_entry_meta(); ?>
       </header>
       <div class="entry-content">
-        <?php if (is_archive() || is_search()) { ?>
-          <?php my_excerpt(100); ?>
+        <?php if (is_archive() || is_search() || is_front_page()) { ?>
+          <?php my_excerpt(30); ?>
         <?php } else { ?>
           <?php the_content(); ?>
         <?php } ?>
