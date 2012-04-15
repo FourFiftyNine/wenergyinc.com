@@ -662,6 +662,7 @@ body.admin-bar .navbar-fixed-top {
 #content section > header h1 strong {
   color: #232323;
   font-size: 16px;
+  font-weight: normal;
 }
 #content article h1 {
   margin: 20px 20px 15px;
@@ -798,9 +799,32 @@ body.admin-bar .navbar-fixed-top {
 .block > header h1 a:hover {
   color: #ff8000;
 }
+.block > footer {
+  height: 35px;
+  line-height: 35px;
+  background: #eeeeee;
+  background: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiA/Pgo8c3ZnIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgd2lkdGg9IjEwMCUiIGhlaWdodD0iMTAwJSIgdmlld0JveD0iMCAwIDEgMSIgcHJlc2VydmVBc3BlY3RSYXRpbz0ibm9uZSI+CiAgPGxpbmVhckdyYWRpZW50IGlkPSJncmFkLXVjZ2ctZ2VuZXJhdGVkIiBncmFkaWVudFVuaXRzPSJ1c2VyU3BhY2VPblVzZSIgeDE9IjAlIiB5MT0iMCUiIHgyPSIwJSIgeTI9IjEwMCUiPgogICAgPHN0b3Agb2Zmc2V0PSIwJSIgc3RvcC1jb2xvcj0iI2VlZWVlZSIgc3RvcC1vcGFjaXR5PSIxIi8+CiAgICA8c3RvcCBvZmZzZXQ9IjEwMCUiIHN0b3AtY29sb3I9IiNlMGUwZTAiIHN0b3Atb3BhY2l0eT0iMSIvPgogIDwvbGluZWFyR3JhZGllbnQ+CiAgPHJlY3QgeD0iMCIgeT0iMCIgd2lkdGg9IjEiIGhlaWdodD0iMSIgZmlsbD0idXJsKCNncmFkLXVjZ2ctZ2VuZXJhdGVkKSIgLz4KPC9zdmc+);
+  background: -moz-linear-gradient(top, #eeeeee 0%, #e0e0e0 100%);
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #eeeeee), color-stop(100%, #e0e0e0));
+  background: -webkit-linear-gradient(top, #eeeeee 0%, #e0e0e0 100%);
+  background: -o-linear-gradient(top, #eeeeee 0%, #e0e0e0 100%);
+  background: -ms-linear-gradient(top, #eeeeee 0%, #e0e0e0 100%);
+  background: linear-gradient(top, #eeeeee 0%, #e0e0e0 100%);
+  filter: progid:dximagetransform.microsoft.gradient(startColorstr='#eeeeee', endColorstr='#e0e0e0', GradientType=0);
+}
+.block > footer a,
+.block > footer a:visited {
+  float: right;
+  font-size: 10px;
+  color: #7b2353;
+  margin-right: 15px;
+}
+.block > footer a:hover {
+  text-decoration: underline;
+}
 .block article {
   border-top: 1px solid #f6f6f6;
-  border-bottom: 1px solid #cfcfcf;
+  border-bottom: 1px solid #bfbfbf;
 }
 .block article.first {
   border-top: none;
@@ -815,6 +839,29 @@ body.admin-bar .navbar-fixed-top {
   margin: 15px 20px 20px;
   font-size: 11px;
   line-height: 14px;
+}
+#bottom {
+  margin-top: 30px;
+}
+#bottom .block {
+  float: left;
+  width: 300px;
+}
+#bottom .block:first-child {
+  margin-right: 26px;
+}
+section#press-releases h2 {
+  margin: 15px;
+}
+section#press-releases p {
+  margin: 15px;
+}
+section#press-releases p a,
+section#press-releases p a:visited {
+  color: #7b2353;
+}
+section#press-releases p a:hover {
+  text-decoration: underline;
 }
 .lt-ie9 .block header h2 {
   font-size: 17px;
@@ -969,28 +1016,6 @@ body.home #blog {
 }
 #third aside:first-child {
   margin-left: 0;
-}
-#third #twitter {
-  border: 1px solid #f6f6f6;
-  width: 298px;
-}
-#third #twitter header h1 {
-  margin: 0;
-  padding: 0 20px;
-  height: 45px;
-  line-height: 45px;
-  background-color: #f4f3f3;
-  border: none;
-  border-bottom: 1px solid #f6f6f6;
-  -webkit-box-shadow: 0 0 15px #e4e6e9 inset;
-  -moz-box-shadow: 0 0 15px #e4e6e9 inset;
-  box-shadow: 0 0 15px #e4e6e9 inset;
-}
-#third .twtr-widget .twtr-ft div {
-  display: none;
-}
-#third .twtr-widget .twtr-hd {
-  display: none;
 }
 /* ============================================
     Search & Search Form
@@ -1177,6 +1202,48 @@ body.error404 #content #main {
 #sidebar {
   float: right;
   width: 300px;
+}
+#sidebar .block,
+#sidebar #stocktwits {
+  margin-bottom: 30px;
+}
+#sidebar .twtr-widget .twtr-tweet {
+  border-top: 1px solid #f6f6f6;
+  border-bottom: 1px solid #bfbfbf;
+}
+#sidebar .twtr-widget .twtr-hd {
+  display: none;
+}
+#sidebar .twtr-widget .twtr-ft div {
+  height: 35px;
+  line-height: 35px;
+  padding: 0 !important;
+  background: #eeeeee;
+  background: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiA/Pgo8c3ZnIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgd2lkdGg9IjEwMCUiIGhlaWdodD0iMTAwJSIgdmlld0JveD0iMCAwIDEgMSIgcHJlc2VydmVBc3BlY3RSYXRpbz0ibm9uZSI+CiAgPGxpbmVhckdyYWRpZW50IGlkPSJncmFkLXVjZ2ctZ2VuZXJhdGVkIiBncmFkaWVudFVuaXRzPSJ1c2VyU3BhY2VPblVzZSIgeDE9IjAlIiB5MT0iMCUiIHgyPSIwJSIgeTI9IjEwMCUiPgogICAgPHN0b3Agb2Zmc2V0PSIwJSIgc3RvcC1jb2xvcj0iI2VlZWVlZSIgc3RvcC1vcGFjaXR5PSIxIi8+CiAgICA8c3RvcCBvZmZzZXQ9IjEwMCUiIHN0b3AtY29sb3I9IiNlMGUwZTAiIHN0b3Atb3BhY2l0eT0iMSIvPgogIDwvbGluZWFyR3JhZGllbnQ+CiAgPHJlY3QgeD0iMCIgeT0iMCIgd2lkdGg9IjEiIGhlaWdodD0iMSIgZmlsbD0idXJsKCNncmFkLXVjZ2ctZ2VuZXJhdGVkKSIgLz4KPC9zdmc+);
+  background: -moz-linear-gradient(top, #eeeeee 0%, #e0e0e0 100%);
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #eeeeee), color-stop(100%, #e0e0e0));
+  background: -webkit-linear-gradient(top, #eeeeee 0%, #e0e0e0 100%);
+  background: -o-linear-gradient(top, #eeeeee 0%, #e0e0e0 100%);
+  background: -ms-linear-gradient(top, #eeeeee 0%, #e0e0e0 100%);
+  background: linear-gradient(top, #eeeeee 0%, #e0e0e0 100%);
+  filter: progid:dximagetransform.microsoft.gradient(startColorstr='#eeeeee', endColorstr='#e0e0e0', GradientType=0);
+}
+#sidebar .twtr-widget .twtr-ft div img {
+  display: none;
+}
+#sidebar .twtr-widget .twtr-ft div span {
+  display: block;
+  float: none !important;
+  height: 35px;
+  margin-left: 10px;
+  background: url(../img/twitter-logo.png) no-repeat left center;
+}
+#sidebar .twtr-widget .twtr-ft div .twtr-join-conv {
+  color: #7b2353 !important;
+  font-weight: bold !important;
+  font-size: 11px;
+  float: right;
+  margin-right: 15px;
 }
 /* =============================================================================
    Posts

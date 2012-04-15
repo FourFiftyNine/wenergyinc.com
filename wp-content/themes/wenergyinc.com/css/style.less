@@ -517,6 +517,7 @@ body.admin-bar .navbar-fixed-top { top: 28px; }
             strong {
                 color: #232323;
                 font-size: 16px;
+                font-weight: normal;
             }
         }
     }
@@ -651,10 +652,24 @@ body.admin-bar .navbar-fixed-top { top: 28px; }
             }
         }
     }
+    > footer {
+        height: 35px;
+        line-height: 35px;
+        .gradientGrey();
+        a,a:visited {
+            float: right;
+            font-size: 10px;
+            color: @purple;
+            margin-right: 15px;
+        }
+        a:hover {
+            text-decoration: underline;
+        }
+    }
 
     article {
         border-top: 1px solid @lightGrey;
-        border-bottom: 1px solid #cfcfcf;
+        border-bottom: 1px solid #bfbfbf;
         &.first {
             border-top: none;
         }
@@ -669,6 +684,30 @@ body.admin-bar .navbar-fixed-top { top: 28px; }
             margin: 15px 20px 20px;
             font-size: 11px;
             line-height: 14px;
+        }
+    }
+}
+#bottom {
+    margin-top: 30px;
+}
+#bottom .block {
+    float: left;
+    width: 300px;
+    &:first-child {
+        margin-right: 26px;
+    }
+}
+section#press-releases {
+    h2 {
+        margin: 15px;
+    }
+    p {
+        margin: 15px;
+        a,a:visited {
+            color: @purple;
+        }
+        a:hover {
+            text-decoration: underline;
         }
     }
 }
@@ -839,21 +878,7 @@ body.home {
             margin-left: 0;
         }
     }
-    #twitter {
-        border: 1px solid @lightGrey;
-        width: 298px;
-        .blockHeader();
-    }
-    .twtr-widget {
-        
-        .twtr-ft div {
-            display: none;
-        }
 
-        .twtr-hd {
-            display: none;
-        }
-    }
 
 
 }
@@ -1076,7 +1101,59 @@ body.error404 {
    Sidebar
    ========================================================================== */
 
-#sidebar { float: right; width: 300px; }
+#sidebar { 
+    float: right; width: 300px;
+
+    .block,
+    #stocktwits {
+        margin-bottom: 30px;
+    }
+
+    #twitter {
+        // border: 1px solid @lightGrey;
+        // width: 298px;
+        // .blockHeader();
+    }
+    .twtr-widget {
+        
+        .twtr-tweet {
+            border-top: 1px solid @lightGrey;
+            border-bottom: 1px solid #bfbfbf;
+        }
+
+        .twtr-hd {
+            display: none;
+        }
+        .twtr-ft div {
+            height: 35px;
+            line-height: 35px;
+            padding: 0 !important;
+            .gradientGrey();
+            img {
+                display: none;
+            }
+            span {
+                display: block;
+                float: none !important;
+                height: 35px;
+                margin-left: 10px;
+                background: url(../img/twitter-logo.png) no-repeat left center;
+            }
+            .twtr-join-conv {
+                color: @purple !important;
+                font-weight: bold !important;
+                font-size: 11px;
+                float: right;
+                margin-right: 15px;
+            }
+        }
+
+        // .twtr-hd {
+        //     display: none;
+        // }
+    }
+
+}
 
 
 

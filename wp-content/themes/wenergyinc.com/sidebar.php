@@ -1,5 +1,50 @@
 <aside id="sidebar">
-  SIDEBAR HERE
+  <section id="stock-quote" class="block">
+      <header>
+        <h1><strong>STOCK</strong>&nbsp;&nbsp;QUOTE</h1>
+      </header>
+        <script src="http://charts.wikinvest.com/wikinvest/wikichart/javascript/scripts.php" type="text/javascript"></script><div id="wikichartContainer_7A3F02E4-9B87-8656-7E87-60B4B5860997"><div style="width: 100%; text-align: center; vertical-align: center; margin-top: 100px;"><a href="http://get.adobe.com/flashplayer/"><img src="http://cdn.wikinvest.com/wikinvest/images/adobe_flash_logo.gif" alt="Flash" style="border-width: 0px;"/><br/>Flash Player 9 or higher is required to view the chart<br/><strong>Click here to download Flash Player now</strong></a></div></div><script type="text/javascript">if (typeof(embedWikichart) != "undefined") {embedWikichart("http://charts.wikinvest.com/WikiChartMini.swf?wmode=transparent","wikichartContainer_7A3F02E4-9B87-8656-7E87-60B4B5860997","100%","200",{"showAnnotations":"true","startDate":"29-09-2011","ticker":"WCUI","liveQuote":"true","endDate":"29-03-2012","embedCodeDate":"2012-3-29"},{});}</script><div style="font-size:9px;text-align:right;width:95%;font-family:Verdana"><a href="http://www.wikinvest.com/chart/WCUI" style="text-decoration:underline; color:#0000ee;">View the full WCUI chart</a> at <a href="http://www.wikinvest.com/">Wikinvest</a></div>
+  </section>
+  <section id="stocktwits">
+    <script type="text/javascript" src="http://stocktwits.com/addon/widget/1/stocktwits-widget.min.js"></script>
+    <script type="text/javascript">
+    StockTwitsWidget.load({ stream: '$yhoo', title: 'Worthington Energy', style: { width: '300', height: '390' } });
+    </script>
+  </section>
+  <section class="block" id="twitter">
+      <header>
+        <h1><strong>WE</strong>&nbsp;&nbsp;ON TWITTER</h1>
+      </header>
+      <script charset="utf-8" src="http://widgets.twimg.com/j/2/widget.js"></script>
+      <script>
+      new TWTR.Widget({
+        version: 2,
+        type: 'profile',
+        rpp: 8,
+        interval: 30000,
+        width: 298,
+        height: 288,
+        theme: {
+          shell: {
+            background: 'none',
+            color: '#222222'
+          },
+          tweets: {
+            background: 'none',
+            color: '#222222',
+            links: '#7b2353'
+          }
+        },
+        features: {
+          avatars: true,
+          scrollbar: true,
+          loop: false,
+          live: false,
+          behavior: 'all'
+        }
+      }).render().setUser('wenergyinc').start();
+      </script>
+  </section>
   <?php //dynamic_sidebar('roots-sidebar'); ?>
   <?php  /*
   // dump($post);
