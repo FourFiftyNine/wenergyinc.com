@@ -8,7 +8,7 @@
   <section id="stocktwits">
     <script type="text/javascript" src="http://stocktwits.com/addon/widget/1/stocktwits-widget.min.js"></script>
     <script type="text/javascript">
-    StockTwitsWidget.load({ stream: '$yhoo', title: 'Worthington Energy', style: { width: '300', height: '390' } });
+    StockTwitsWidget.load({ stream: '$yhoo', title: 'Worthington Energy', style: { width: '300', height: '350' } });
     </script>
   </section>
   <section class="block" id="twitter">
@@ -23,7 +23,7 @@
         rpp: 8,
         interval: 30000,
         width: 298,
-        height: 288,
+        height: 272,
         theme: {
           shell: {
             background: 'none',
@@ -44,6 +44,18 @@
         }
       }).render().setUser('wenergyinc').start();
       </script>
+  </section>
+  <section class="block" id="contact-we">
+    <header>
+      <h1>CONTACT <strong>WE</strong></h1>
+    </header>
+    <article>
+      <strong>Direct Contact Info:</strong> <br /> 
+      <strong>Worthington Energy, Inc.</strong> <br /><br />
+      220 Montgomery Street, Suite 1094 <br />
+      San Francisco, CA 94104 <br />
+      <strong>T</strong>:(415) 529-3480 main
+    </article>
   </section>
   <?php //dynamic_sidebar('roots-sidebar'); ?>
   <?php  /*

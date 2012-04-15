@@ -1207,14 +1207,14 @@ body.error404 #content #main {
 #sidebar #stocktwits {
   margin-bottom: 30px;
 }
-#sidebar .twtr-widget .twtr-tweet {
+#sidebar #twitter .twtr-widget .twtr-tweet {
   border-top: 1px solid #f6f6f6;
   border-bottom: 1px solid #bfbfbf;
 }
-#sidebar .twtr-widget .twtr-hd {
+#sidebar #twitter .twtr-widget .twtr-hd {
   display: none;
 }
-#sidebar .twtr-widget .twtr-ft div {
+#sidebar #twitter .twtr-widget .twtr-ft div {
   height: 35px;
   line-height: 35px;
   padding: 0 !important;
@@ -1228,22 +1228,30 @@ body.error404 #content #main {
   background: linear-gradient(top, #eeeeee 0%, #e0e0e0 100%);
   filter: progid:dximagetransform.microsoft.gradient(startColorstr='#eeeeee', endColorstr='#e0e0e0', GradientType=0);
 }
-#sidebar .twtr-widget .twtr-ft div img {
+#sidebar #twitter .twtr-widget .twtr-ft div img {
   display: none;
 }
-#sidebar .twtr-widget .twtr-ft div span {
+#sidebar #twitter .twtr-widget .twtr-ft div span {
   display: block;
   float: none !important;
   height: 35px;
   margin-left: 10px;
   background: url(../img/twitter-logo.png) no-repeat left center;
 }
-#sidebar .twtr-widget .twtr-ft div .twtr-join-conv {
+#sidebar #twitter .twtr-widget .twtr-ft div .twtr-join-conv {
   color: #7b2353 !important;
   font-weight: bold !important;
   font-size: 11px;
   float: right;
   margin-right: 15px;
+}
+#sidebar #contact-we {
+  margin-bottom: 0;
+}
+#sidebar #contact-we article {
+  color: #000000;
+  padding: 10px 15px;
+  border-bottom: 0;
 }
 /* =============================================================================
    Posts
