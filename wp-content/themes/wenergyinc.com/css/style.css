@@ -665,9 +665,11 @@ body.admin-bar .navbar-fixed-top {
   font-weight: normal;
 }
 #content article h1 {
+  color: #272727;
   margin: 20px 20px 15px;
+  font-size: 30px;
+  text-transform: uppercase;
   padding-bottom: 10px;
-  border-bottom: 1px solid #f6f6f6;
 }
 #content article h2 {
   color: #292929;
@@ -1061,6 +1063,48 @@ body.search #main article {
   margin-bottom: 20px;
 }
 /* ============================================
+    Pages
+   ========================================= */
+#main article#page #the-content {
+  background: #fff;
+  border: 1px solid #e0e0e0;
+  padding: 0 25px 25px;
+}
+#main article#page header {
+  border: 1px solid #e0e0e0;
+  border-bottom: 5px solid #7b2353;
+  -webkit-box-shadow: 0 1px 2px rgba(0, 0, 0, 0.21);
+  -moz-box-shadow: 0 1px 2px rgba(0, 0, 0, 0.21);
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.21);
+  height: 174px;
+  margin-bottom: 30px;
+}
+body.management article > header,
+body.board-of-directors article > header {
+  background: url(../img/management.png) right center;
+}
+body.management article > header > h1,
+body.board-of-directors article > header > h1 {
+  position: relative;
+  top: 60px;
+}
+body.board-of-directors article > header h1 {
+  width: 220px;
+  line-height: 32px;
+  position: relative;
+  top: 45px;
+}
+body.about-worthington article > header {
+  background: url(../img/about-worthington.png) right center;
+}
+body.about-worthington article > header > h1 {
+  width: 220px;
+  line-height: 32px;
+  position: relative;
+  left: -5px;
+  top: 40px;
+}
+/* ============================================
     Stock Chart Page
    ========================================= */
 body.stock-information object {
@@ -1083,10 +1127,14 @@ body.archive article.first {
 body.news #content #main {
   width: 100%;
 }
+body.board-of-directors #content #main br,
+body.management #content #main br {
+  display: none;
+}
 body.board-of-directors #content #main strong,
 body.management #content #main strong {
-  font-size: 18px;
-  margin: 25px 0 -5px;
+  font-size: 14px;
+  margin: 20px 0 0;
   display: block;
 }
 /* ============================================
