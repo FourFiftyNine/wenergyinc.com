@@ -41,10 +41,12 @@ function roots_setup() {
   // add_theme_support('post-formats', array('aside', 'gallery', 'link', 'image', 'quote', 'status', 'video', 'audio', 'chat'));
 
   // http://codex.wordpress.org/Function_Reference/register_nav_menus
-  register_nav_menus(array(
-    'primary_navigation' => __('Primary Navigation', 'roots'),
-    'footer_navigation' => __('Footer Navigation', 'roots')
-  ));
+  register_nav_menu('primary_navigation', 'Primary Navigation');
+  register_nav_menu('footer_navigation', 'Footer Navigation');
+  // register_nav_menus(array(
+  //   'primary_navigation' => __('Primary Navigation'),
+  //   'footer_navigation' => __('Footer Navigation')
+  // ));
 
 }
 
@@ -172,14 +174,6 @@ function my_excerpt($length = 55) {
   Excerpt::length($length);
 }
 
-// add_filter('nav_menu_css_class', 'add_parent_class', 10, 2 );
+// Allows classes on footer navigation (doesnt track menu item id)
+remove_filter('nav_menu_item_id', '_nav_menu_item_id_use_once');
 
-// function add_parent_class($classes, $item) {
-
-//   if(!$item->menu_item_parent) {
-//     $classes[] = 'parent';
-//     return $classes;
-//   }
-//   dump($item); exit;
-//   return $classes;
-// }

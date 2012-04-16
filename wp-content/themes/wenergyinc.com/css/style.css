@@ -283,7 +283,7 @@ td {
    Base
    ========================================================================== */
 body {
-  background: #f6f6f6;
+  background: #e9e7e7;
   color: #5c5c5c;
   font-size: 13px;
 }
@@ -712,6 +712,7 @@ body.admin-bar .navbar-fixed-top {
   font-size: 11px;
   margin-left: 12px;
   margin-right: 12px;
+  font-style: italic;
 }
 #content article footer .comments {
   float: left;
@@ -797,7 +798,7 @@ body.admin-bar .navbar-fixed-top {
   color: #5c5c5c;
 }
 .block > header h1 a:hover {
-  color: #ff8000;
+  color: #7b2353;
 }
 .block > footer {
   height: 35px;
@@ -1192,9 +1193,10 @@ body.error404 #content #main {
    Primary Content
    ========================================================================== */
 #wrap {
-  padding: 30px 0;
+  padding: 30px 0 50px;
   position: relative;
   z-index: 1;
+  background: #f6f6f6;
 }
 /* =============================================================================
    Sidebar
@@ -1281,9 +1283,26 @@ ol.commentlist img.avatar {
 /* =============================================================================
    Footer
    ========================================================================== */
+footer {
+  position: relative;
+  z-index: 2;
+}
 footer header {
-  background-color: #787878;
-  height: 40px;
+  background: url(../img/bg-footer-header.png) repeat-x;
+  height: 34px;
+  border-bottom: 1px solid #ffffff;
+}
+footer header .to-top {
+  float: right;
+  position: relative;
+  top: -15px;
+}
+footer header .to-top .arrow {
+  -webkit-transform: rotate(-90deg);
+  -moz-transform: rotate(-90deg);
+  -ms-transform: rotate(-90deg);
+  -o-transform: rotate(-90deg);
+  transform: rotate(-90deg);
 }
 footer header .form-search {
   float: left;
@@ -1301,43 +1320,105 @@ footer .col {
 }
 footer .menu > li {
   float: left;
-  margin-left: 45px;
-  width: 155px;
+  margin-left: 25px;
+  width: 135px;
+}
+footer .menu > li a,
+footer .menu > li a:visited {
+  color: #7b2353;
+  text-transform: uppercase;
+}
+footer .menu > li a:hover,
+footer .menu > li a:visited:hover {
+  color: #5c5c5c;
+}
+footer .menu > li.menu-about {
+  margin-left: 55px;
+}
+footer .menu > li.menu-investor-relations {
+  width: 145px;
+}
+footer .menu > li.menu-press {
+  width: 100px;
+}
+footer .menu > li.menu-contact {
+  margin-left: 15px;
+  width: 65px;
+}
+footer .menu > li.menu-blog {
+  width: 45px;
 }
 footer .menu > li:first-child {
+  display: none;
   margin-left: 100px;
 }
 footer .menu > li .sub-menu li a {
-  color: #787878;
+  color: #313131;
+  text-transform: capitalize;
+  font-size: 11px;
   display: block;
-  margin-bottom: 15px;
+  margin-bottom: 5px;
 }
 footer .menu > li .sub-menu li a:hover {
-  color: #ff8000;
+  color: #7b2353;
 }
 footer .menu > li > a {
   display: block;
-  color: #5c5c5c;
-  font-size: 15px;
+  font-size: 13px;
   margin-bottom: 20px;
 }
 footer #main-footer {
   padding: 40px 0;
 }
+footer #main-footer #footer-brand {
+  border: 1px solid #e0e0e0;
+  background: #ffffff;
+  width: 273px;
+}
 footer #main-footer .brand {
+  background: url(../img/logo-footer.png) no-repeat top center;
   float: none;
-  height: 62px;
   background-position: center top;
-  border-bottom: 1px solid #787878;
   padding-bottom: 40px;
+  width: 273px;
 }
 footer #main-footer .contact-info {
-  color: #5c5c5c;
+  text-align: center;
+  margin: 20px 20px 10px;
+  color: #000000;
+  font-size: 11px;
+}
+footer #main-footer nav.social {
+  margin: 0 20px 20px;
+}
+footer #main-footer .email {
+  margin: 0 20px;
+  position: relative;
+  top: 4px;
+  background: url(../img/icon-email.png) no-repeat center center;
+  height: 11px;
+  width: 16px;
+  float: left;
+}
+footer #main-footer .email:hover {
+  opacity: 0.8;
+  -moz-opacity: 0.8;
+  filter: alpha(opacity=8);
 }
 footer .copy {
+  clear: both;
   float: right;
   color: #5c5c5c;
-  margin-top: 150px;
+  margin-top: -20px;
+  font-size: 10px;
+}
+footer .copy a,
+footer .copy a:visited {
+  color: #5c5c5c;
+}
+footer .copy a.privacy-link,
+footer .copy a:visited.privacy-link {
+  margin-left: 15px;
 }
 #content-info {
   color: #ffffff;

@@ -3,8 +3,8 @@
 */
 jQuery(document).ready(function() {
     addWmodeTransparent();
-    $("ul.sub-menu").parents('li').addClass('parent').append('<span class="arrow"></span>');
-    $("ul.sub-menu").hover(function() {
+    $("header ul.sub-menu").parents('li').addClass('parent').append('<span class="arrow"></span>');
+    $("header ul.sub-menu").hover(function() {
         $(this).parents('li').addClass('active');
         $(this).siblings('a').addClass('active');
     },
@@ -12,7 +12,7 @@ jQuery(document).ready(function() {
         $(this).parents('li').removeClass('active');
         $(this).siblings('a').removeClass('active');
     });
-    $("li.parent .arrow").hover(function() {
+    $("header li.parent .arrow").hover(function() {
         $(this).parents('li').addClass('active');
         $(this).siblings('a').addClass('active');
     }, function() {
