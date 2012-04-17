@@ -558,15 +558,18 @@ body.admin-bar .navbar-fixed-top { top: 28px; }
             &.author {
                 display: none;
             }
-            margin: 5px 10px 0;
+            margin: 0 0 10px;
+            &:first-child {
+                margin-top: 0;
+            }
         }
         footer {
             font-family: 'Arial';
             font-size: 10px;
             margin: 0 20px 0px 3px;
             padding-bottom: 5px;
-            height: 55px;
-            line-height: 55px;
+            height: 45px;
+            line-height: 45px;
             time {
                 float: left;
                 font-size: 11px;
@@ -799,6 +802,9 @@ body.home {
     }
     #blog {
         margin-top: 30px;
+        article header h2 {
+            margin: 25px 0 15px;
+        }
     }
 }
 
@@ -939,7 +945,10 @@ body.search {
     #the-content {
         background: #fff;
         border: 1px solid @grey;
-        padding: 0 25px 25px;
+        padding: 25px 25px;
+        > p:first-child > strong:first-child {
+            margin-top: 0;
+        }
     }
     header {
         border: 1px solid @grey;
@@ -976,10 +985,43 @@ body.about-worthington article > header {
         top: 40px;
     }
 }
+
+body.company-profile,
+body.assets,
+body.sec-filings,
+body.stock-quote,
+body.strategy {
+    article > header {
+        background: url(../img/investor-relations.png) right center;
+        > h1 {
+            width: 220px;
+            line-height: 32px;
+            position: relative;
+            left: -5px;
+            top: 40px;
+        }
+    }
+}
+body.company-profile article > header > h1 {}
+body.assets article > header > h1,
+body.sec-filings article > header > h1,
+body.strategy article > header > h1,
+body.contact article > header > h1 { position: relative; top: 55px;}
+body.ir-contact article > header > h1 {}
+
+body.ir-contact,
+body.contact {
+    article > header {
+        background: url(../img/contact.png) right center;
+    }
+}
 /* ============================================
     Stock Chart Page
    ========================================= */
-body.stock-information {
+body.stock-quote {
+    #sidebar {
+        #stock-quote { display: none; }
+    }
     object {
         margin-top: 10px;
         margin-left: 15px;
@@ -1000,12 +1042,20 @@ body.archive {
     }
 }
 /* ============================================
-    News
+    News & Press Releases
    ========================================= */
-body.news {
+body.news,
+body.press-releases {
     #content {
         #main {
-            width: 100%;
+            #the-content {
+                .gradientGreyBlock();
+                ul {
+                    margin: 0;
+                    padding: 0;
+                    list-style: none;
+                }
+            }
         }
     }
 }
@@ -1017,7 +1067,9 @@ body.news.single {
         }
     }
 }
-
+/* ============================================
+    Board of directors / Management
+   ========================================= */
 body.board-of-directors,
 body.management {
     #content {
@@ -1066,6 +1118,10 @@ body.sec-filings {
    ========================================= */
 body.contact,
 body.ir-contact {
+    #stock-quote,
+    #contact-we {
+        display: none;
+    }
     #content {
 
     }
@@ -1075,6 +1131,7 @@ body.ir-contact {
     }
     div.wpcf7-validation-errors {
         border-color: @red;
+        clear: both;
     }
     .your-message {
         span.wpcf7-not-valid-tip {
@@ -1092,9 +1149,24 @@ body.ir-contact {
     }
     .address {
         float: right;
-        margin-top: 15px;
-        margin-right: 40px;
-        color: @lightGrey;
+        width: 273px;
+        text-align: center;
+        .brand {
+            background: url(../img/logo-footer.png) no-repeat top center;
+            background-position: center top;
+            padding-bottom: 40px;
+            width: 273px;
+
+        }
+
+        nav {
+            margin: 0 auto;
+            width: 90px;
+            margin-bottom: 10px;
+        }
+
+        border: 1px solid #e0e0e0;
+        
         h2 {
             color: @darkGrey;
         }

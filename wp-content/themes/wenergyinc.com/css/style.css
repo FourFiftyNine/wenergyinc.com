@@ -696,18 +696,21 @@ body.admin-bar .navbar-fixed-top {
   width: 440px;
 }
 #content article p {
-  margin: 5px 10px 0;
+  margin: 0 0 10px;
 }
 #content article p.author {
   display: none;
+}
+#content article p:first-child {
+  margin-top: 0;
 }
 #content article footer {
   font-family: 'Arial';
   font-size: 10px;
   margin: 0 20px 0px 3px;
   padding-bottom: 5px;
-  height: 55px;
-  line-height: 55px;
+  height: 45px;
+  line-height: 45px;
 }
 #content article footer time {
   float: left;
@@ -948,6 +951,9 @@ body.home #featured-post #feature-excerpt .btn {
 body.home #blog {
   margin-top: 30px;
 }
+body.home #blog article header h2 {
+  margin: 25px 0 15px;
+}
 /* ============================================
     Third Row - PR, StockTwits, Twitter
    ========================================= */
@@ -1068,7 +1074,10 @@ body.search #main article {
 #main article#page #the-content {
   background: #fff;
   border: 1px solid #e0e0e0;
-  padding: 0 25px 25px;
+  padding: 25px 25px;
+}
+#main article#page #the-content > p:first-child > strong:first-child {
+  margin-top: 0;
 }
 #main article#page header {
   border: 1px solid #e0e0e0;
@@ -1104,10 +1113,42 @@ body.about-worthington article > header > h1 {
   left: -5px;
   top: 40px;
 }
+body.company-profile article > header,
+body.assets article > header,
+body.sec-filings article > header,
+body.stock-quote article > header,
+body.strategy article > header {
+  background: url(../img/investor-relations.png) right center;
+}
+body.company-profile article > header > h1,
+body.assets article > header > h1,
+body.sec-filings article > header > h1,
+body.stock-quote article > header > h1,
+body.strategy article > header > h1 {
+  width: 220px;
+  line-height: 32px;
+  position: relative;
+  left: -5px;
+  top: 40px;
+}
+body.assets article > header > h1,
+body.sec-filings article > header > h1,
+body.strategy article > header > h1,
+body.contact article > header > h1 {
+  position: relative;
+  top: 55px;
+}
+body.ir-contact article > header,
+body.contact article > header {
+  background: url(../img/contact.png) right center;
+}
 /* ============================================
     Stock Chart Page
    ========================================= */
-body.stock-information object {
+body.stock-quote #sidebar #stock-quote {
+  display: none;
+}
+body.stock-quote object {
   margin-top: 10px;
   margin-left: 15px;
   margin-bottom: 0;
@@ -1122,11 +1163,29 @@ body.archive article.first {
   margin-top: 0;
 }
 /* ============================================
-    News
+    News & Press Releases
    ========================================= */
-body.news #content #main {
-  width: 100%;
+body.news #content #main #the-content,
+body.press-releases #content #main #the-content {
+  background: #e0e0e0;
+  background: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiA/Pgo8c3ZnIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgd2lkdGg9IjEwMCUiIGhlaWdodD0iMTAwJSIgdmlld0JveD0iMCAwIDEgMSIgcHJlc2VydmVBc3BlY3RSYXRpbz0ibm9uZSI+CiAgPGxpbmVhckdyYWRpZW50IGlkPSJncmFkLXVjZ2ctZ2VuZXJhdGVkIiBncmFkaWVudFVuaXRzPSJ1c2VyU3BhY2VPblVzZSIgeDE9IjAlIiB5MT0iMCUiIHgyPSIwJSIgeTI9IjEwMCUiPgogICAgPHN0b3Agb2Zmc2V0PSIwJSIgc3RvcC1jb2xvcj0iI2Y0ZjRmNCIgc3RvcC1vcGFjaXR5PSIxIi8+CiAgICA8c3RvcCBvZmZzZXQ9IjEwMCUiIHN0b3AtY29sb3I9IiNlMGUwZTAiIHN0b3Atb3BhY2l0eT0iMSIvPgogIDwvbGluZWFyR3JhZGllbnQ+CiAgPHJlY3QgeD0iMCIgeT0iMCIgd2lkdGg9IjEiIGhlaWdodD0iMSIgZmlsbD0idXJsKCNncmFkLXVjZ2ctZ2VuZXJhdGVkKSIgLz4KPC9zdmc+);
+  background: -moz-linear-gradient(top, #f4f4f4 0%, #e0e0e0 100%);
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #f4f4f4), color-stop(100%, #e0e0e0));
+  background: -webkit-linear-gradient(top, #f4f4f4 0%, #e0e0e0 100%);
+  background: -o-linear-gradient(top, #f4f4f4 0%, #e0e0e0 100%);
+  background: -ms-linear-gradient(top, #f4f4f4 0%, #e0e0e0 100%);
+  background: linear-gradient(top, #f4f4f4 0%, #e0e0e0 100%);
+  filter: progid:dximagetransform.microsoft.gradient(startColorstr='#f4f4f4', endColorstr='#e0e0e0', GradientType=0);
 }
+body.news #content #main #the-content ul,
+body.press-releases #content #main #the-content ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+/* ============================================
+    Board of directors / Management
+   ========================================= */
 body.board-of-directors #content #main br,
 body.management #content #main br {
   display: none;
@@ -1163,6 +1222,12 @@ body.sec-filings #main li b {
 /* ============================================
     Contact Page
    ========================================= */
+body.contact #stock-quote,
+body.ir-contact #stock-quote,
+body.contact #contact-we,
+body.ir-contact #contact-we {
+  display: none;
+}
 body.contact span.wpcf7-not-valid-tip,
 body.ir-contact span.wpcf7-not-valid-tip {
   top: -3px;
@@ -1171,6 +1236,7 @@ body.ir-contact span.wpcf7-not-valid-tip {
 body.contact div.wpcf7-validation-errors,
 body.ir-contact div.wpcf7-validation-errors {
   border-color: #ae2b28;
+  clear: both;
 }
 body.contact .your-message span.wpcf7-not-valid-tip,
 body.ir-contact .your-message span.wpcf7-not-valid-tip {
@@ -1190,9 +1256,22 @@ body.ir-contact .form {
 body.contact .address,
 body.ir-contact .address {
   float: right;
-  margin-top: 15px;
-  margin-right: 40px;
-  color: #f6f6f6;
+  width: 273px;
+  text-align: center;
+  border: 1px solid #e0e0e0;
+}
+body.contact .address .brand,
+body.ir-contact .address .brand {
+  background: url(../img/logo-footer.png) no-repeat top center;
+  background-position: center top;
+  padding-bottom: 40px;
+  width: 273px;
+}
+body.contact .address nav,
+body.ir-contact .address nav {
+  margin: 0 auto;
+  width: 90px;
+  margin-bottom: 10px;
 }
 body.contact .address h2,
 body.ir-contact .address h2 {
