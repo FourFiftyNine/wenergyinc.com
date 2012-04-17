@@ -89,7 +89,7 @@ get_header(); ?>
                   <header>
                     <h2><a href="<?php echo get_permalink($post->ID) ?>"><?php echo $post->post_title; ?></a></h2>
                   </header>
-                  <?php my_excerpt(40); ?>
+                  <?php my_excerpt(25); ?>
                 </article>
               <?php endforeach; ?>
               <footer>

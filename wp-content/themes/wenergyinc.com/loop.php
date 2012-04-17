@@ -10,25 +10,41 @@
 <?php /* Start loop */ ?>
 <?php $count = 1; ?>
 <?php while (have_posts()) : the_post(); ?>
-  <?php $class = ($count==1) ? ' first' : ''; ?>
-  <?php roots_post_before(); ?>
+  <?php $class = 'clearfix'; ?>
+  <?php if($count == 1): ?>
+    <?php $class .= ' first' ?>
+  <?php elseif($count == count($posts)): ?>
+    <?php $class .= ' last'; ?>
+  <?php endif; ?>
     <article id="post-<?php the_ID(); ?>" <?php post_class($class); ?>>
     <?php roots_post_inside_before(); ?>
-      <header>
-        <h2><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h2>
-        <?php roots_entry_meta(); ?>
-      </header>
-      <div class="entry-content">
-        <?php if (is_archive() || is_search() || is_front_page()) { ?>
-          <?php my_excerpt(30); ?>
-        <?php } else { ?>
-          <?php the_content(); ?>
-        <?php } ?>
+        <?php if ( has_post_thumbnail() ) :  ?>
+          <div class="post-featured-thumb">
+            <?php the_post_thumbnail(); ?>
+          </div>
+        <?php endif; ?>
+        <?php $class = (has_post_thumbnail()) ? 'post-content' : 'post-content no-thumb'  ?>
+      <div class="<?php echo $class ?>">
+          <header>
+            <h2><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h2>
+          </header>
+          <div class="entry-content">
+            <?php if (is_archive() || is_search() || is_front_page()) { ?>
+              <?php my_excerpt(50); ?>
+            <?php } else { ?>
+              <?php the_content(); ?>
+            <?php } ?>
+          </div>
+          <footer>
+             <a href="<?php comments_link(); ?>" class="comments">
+               <?php comments_number( '<span>0</span> Comments', '<span>1</span> Comment', '% Comments' ); ?>&nbsp;&nbsp;&nbsp;&nbsp;|
+             </a>
+            <time datetime="<?php the_time('Y-m-d')?>"><?php the_time('n/j/y') ?>&nbsp;&nbsp;&nbsp;&nbsp;|
+            </time>
+            <a class="read-more" href="<?php get_permalink() ?>">Read Post <span class="arrow"></span></a>
+            <?php $tags = get_the_tags(); if ($tags) { ?><p><?php the_tags(); ?></p><?php } ?>
+          </footer>
       </div>
-      <footer>
-        <?php $tags = get_the_tags(); if ($tags) { ?><p><?php the_tags(); ?></p><?php } ?>
-      </footer>
-    <?php roots_post_inside_after(); ?>
     </article>
   <?php roots_post_after(); ?>
   <?php $count++; ?>

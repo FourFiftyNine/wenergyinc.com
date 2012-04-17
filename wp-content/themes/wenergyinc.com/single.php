@@ -9,6 +9,7 @@
       </div><!-- /#main -->
     <?php roots_main_after(); ?>
     <?php roots_sidebar_before(); ?>
+      <?php get_sidebar(); ?>
     <?php roots_sidebar_after(); ?>
     </div><!-- /#content -->
   <?php roots_content_after(); ?>

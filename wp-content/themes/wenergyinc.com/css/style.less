@@ -552,13 +552,17 @@ body.admin-bar .navbar-fixed-top { top: 28px; }
         .post-content {
             float: left;
             width: 440px;
+            &.no-thumb {
+                width: 600px;
+                padding: 0 20px 20px;
+            }
         }
 
         p {
             &.author {
                 display: none;
             }
-            margin: 0 0 10px;
+            margin: 0 10px 10px 0;
             &:first-child {
                 margin-top: 0;
             }
@@ -570,7 +574,10 @@ body.admin-bar .navbar-fixed-top { top: 28px; }
             padding-bottom: 5px;
             height: 45px;
             line-height: 45px;
+        }
+        footer,header {
             time {
+                color: @darkGrey;
                 float: left;
                 font-size: 11px;
                 margin-left: 12px;
@@ -578,6 +585,7 @@ body.admin-bar .navbar-fixed-top { top: 28px; }
                 font-style: italic;
             }
             .comments {
+                color: @darkGrey;
                 float: left;
                 span {
                     color: @white;
@@ -817,7 +825,6 @@ body.home {
         margin: 0;
         padding: 0 20px;
         height: 45px;
-        line-height: 45px;
         background-color: @offWhite;
         border: none;
         border-bottom: 1px solid @lightGrey;
@@ -1029,18 +1036,6 @@ body.stock-quote {
     }
 }
 
-/* ============================================
-    All Archive/Category Pages
-   ========================================= */
-body.archive {
-    article {
-        margin-top: 20px;
-
-        &.first {
-            margin-top: 0;
-        }
-    }
-}
 /* ============================================
     News & Press Releases
    ========================================= */
@@ -1290,6 +1285,52 @@ body.error404 {
 .hentry time { display: block; }
 .hentry p.byline { }
 .hentry footer { clear: both; }
+
+body.archive #main {
+    article {
+        border-top: 1px solid @lightGrey;
+        border-bottom: 1px solid #bfbfbf;
+        &.first {
+            border-top: none;
+        }
+        &.last {
+            border-bottom: none;
+        }
+    }
+    border: 1px solid @grey;
+    .box-shadow(0 1px 2px rgba(0,0,0,.21));
+    position: relative;
+    .gradientGreyBlock();
+    .page-header {
+        height: 35px;
+        line-height: 35px;
+        .gradientGrey();
+        border-bottom: 1px solid @purple;
+        h1 {
+            float: left;
+            margin: 0 10px;
+            font-size: 16px;
+            text-transform: uppercase;
+            color: @darkGrey;
+            a {
+                color: @darkGrey;
+
+                &:hover {
+                    color: @purple;
+                }
+            }
+        }
+    }
+    .post-content {
+        h2 {
+            margin: 25px 0 15px;
+        }
+        .entry-content {
+            font-size: 11px;
+            line-height: 15px;
+        }
+    }
+}
 
 
 
