@@ -8,7 +8,7 @@
   <section id="stocktwits">
     <script type="text/javascript" src="http://stocktwits.com/addon/widget/1/stocktwits-widget.min.js"></script>
     <script type="text/javascript">
-    StockTwitsWidget.load({ stream: '$yhoo', title: 'Worthington Energy', style: { width: '300', height: '350' } });
+    StockTwitsWidget.load({ stream: '@worthingtonenergy', title: 'Worthington Energy', style: { width: '300', height: '350' } });
     </script>
   </section>
   <section class="block" id="twitter">

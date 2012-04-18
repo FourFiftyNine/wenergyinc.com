@@ -32,7 +32,7 @@
     <?php roots_main_after(); ?>
 
     <?php $categories = get_the_category($post->ID); ?>
-    <?php if($categories[0]->category_nicename != 'news'): ?>
+    <?php if(true/*$categories[0]->category_nicename != 'news'*/): ?>
       <?php roots_sidebar_before(); ?>
         <aside id="sidebar" class="<?php echo SIDEBAR_CLASSES; ?>" role="complementary">
         <?php roots_sidebar_inside_before(); ?>
