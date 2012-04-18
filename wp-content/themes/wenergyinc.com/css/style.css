@@ -1124,6 +1124,16 @@ body.board-of-directors article > header h1 {
   position: relative;
   top: 45px;
 }
+body.page article > header {
+  background: url(../img/about-worthington.png) right center;
+}
+body.page article > header > h1 {
+  width: 220px;
+  line-height: 32px;
+  position: relative;
+  left: -5px;
+  top: 55px;
+}
 body.about-worthington article > header {
   background: url(../img/about-worthington.png) right center;
 }
