@@ -30,6 +30,7 @@ wp-content/plugins/*
 !wp-content/plugins/google-analytics-for-wordpress/
 !wp-content/plugins/contact-form-7/
 !wp-content/plugins/rss-import/
+!wp-content/plugins/feedwordpress/
 #!wp-content/plugins/rss-in-page/
 
 
