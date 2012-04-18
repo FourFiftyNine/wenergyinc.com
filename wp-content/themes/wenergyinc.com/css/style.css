@@ -1136,6 +1136,7 @@ body.about-worthington article > header > h1 {
 }
 body.company-profile article > header,
 body.assets article > header,
+body.current-assets article > header,
 body.sec-filings article > header,
 body.stock-quote article > header,
 body.strategy article > header {
@@ -1143,6 +1144,7 @@ body.strategy article > header {
 }
 body.company-profile article > header > h1,
 body.assets article > header > h1,
+body.current-assets article > header > h1,
 body.sec-filings article > header > h1,
 body.stock-quote article > header > h1,
 body.strategy article > header > h1 {
