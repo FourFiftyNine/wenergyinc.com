@@ -722,7 +722,6 @@ body.admin-bar .navbar-fixed-top {
   float: left;
   font-size: 11px;
   margin-left: 12px;
-  margin-right: 12px;
   font-style: italic;
 }
 #content article footer .comments,
@@ -748,6 +747,11 @@ body.admin-bar .navbar-fixed-top {
   float: left;
   color: #7b2353;
   font-weight: bold;
+  margin-left: 12px;
+}
+#content article footer .read-more .divider,
+#content article header .read-more .divider {
+  color: #5C5C5C;
 }
 #content article footer .read-more:hover,
 #content article header .read-more:hover {
@@ -1210,8 +1214,26 @@ body.press-releases #content #main #the-content ul {
   padding: 0;
   list-style: none;
 }
+body.news #content #main .post-content {
+  padding-bottom: 10px;
+}
+body.news #content #main .post-content h2 {
+  margin-bottom: 5px;
+}
 body.news #content #main .post-content footer {
+  line-height: inherit;
+}
+body.news #content #main .post-content footer time {
+  font-size: 15px;
+  float: none;
+  margin-left: 0;
+}
+body.news #content #main .post-content footer .read-more,
+body.news #content #main .post-content footer .comments {
   display: none;
+}
+body.news #content #main .post-content footer .author {
+  display: block;
 }
 /* ============================================
     Board of directors / Management

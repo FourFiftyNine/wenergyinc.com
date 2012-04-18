@@ -585,7 +585,7 @@ body.admin-bar .navbar-fixed-top { top: 28px; }
                 float: left;
                 font-size: 11px;
                 margin-left: 12px;
-                margin-right: 12px;
+                
                 font-style: italic;
             }
             .comments {
@@ -608,6 +608,10 @@ body.admin-bar .navbar-fixed-top { top: 28px; }
                 float: left;
                 color: @purple;
                 font-weight: bold;
+                margin-left: 12px;
+                .divider {
+                    color: #5C5C5C;
+                }
                 &:hover {
                     text-decoration: underline;
                 }
@@ -1092,8 +1096,24 @@ body.news {
     #content {
         #main {
             .post-content {
+                h2 {
+                    margin-bottom: 5px;
+                }
+                padding-bottom: 10px;
                 footer {
-                    display: none;
+                    line-height: inherit;
+                    time {
+                        font-size: 15px;
+                        float: none;
+                        margin-left: 0;
+                    }
+                    .read-more,
+                    .comments {
+                        display: none;
+                    }
+                    .author {
+                        display: block;
+                    }
                 }
             }
         }

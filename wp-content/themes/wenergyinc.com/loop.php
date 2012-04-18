@@ -35,13 +35,23 @@
               <?php the_content(); ?>
             <?php } ?>
           </div>
+
+          <?php $categories = get_the_category($post->ID); ?>
           <footer>
              <a href="<?php comments_link(); ?>" class="comments">
                <?php comments_number( '<span>0</span> Comments', '<span>1</span> Comment', '% Comments' ); ?>&nbsp;&nbsp;&nbsp;&nbsp;|
              </a>
-            <time datetime="<?php the_time('Y-m-d')?>"><?php the_time('n/j/y') ?>&nbsp;&nbsp;&nbsp;&nbsp;|
+            <time datetime="<?php the_time('Y-m-d')?>">
+               <?php if($categories[0]->category_nicename == 'news'): ?>
+                  <strong>published: </strong>
+               <?php endif ?>
+              <?php the_time('n/j/y') ?>
             </time>
-            <a class="read-more" href="<?php get_permalink() ?>">Read Post <span class="arrow"></span></a>
+            
+            <?php if($categories[0]->category_nicename == 'news'): ?>
+              <p class="author"><strong>source: </strong><?php echo get_the_author(); ?></p>
+            <?php endif; ?>
+            <a class="read-more" href="<?php get_permalink() ?>"><span class="divider">|&nbsp;&nbsp;&nbsp;&nbsp;</span>Read Post <span class="arrow"></span></a>
             <?php $tags = get_the_tags(); if ($tags) { ?><p><?php the_tags(); ?></p><?php } ?>
           </footer>
       </div>
