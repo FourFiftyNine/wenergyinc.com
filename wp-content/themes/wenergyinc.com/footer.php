@@ -32,7 +32,7 @@
           <?php //wp_reset_query(); ?>
           <?php wp_nav_menu(array('menu' => 'Main Navigation')); ?>
         </nav>
-        <p class="copy">&copy; <?php echo date('Y'); ?> <?php bloginfo('name'); ?><a class="privacy-link" href="/privacy">Privacy Policy</a>&nbsp;&nbsp;|&nbsp;&nbsp;<a href="/terms">Terms and Conditions</a></p>
+        <p class="copy">&copy; <?php echo date('Y'); ?> <?php bloginfo('name'); ?><a class="privacy-link" href="/legal">Legal</a>&nbsp;&nbsp;|&nbsp;&nbsp;<a href="/disclaimer">Disclaimer</a></p>
       </section>  
       <?php roots_footer_inside(); ?>
       <?php dynamic_sidebar('roots-footer'); ?>
