@@ -1317,6 +1317,10 @@ body.ir-contact div.wpcf7-validation-errors {
   border-color: #ae2b28;
   clear: both;
 }
+body.contact div.wpcf7-mail.sent-ok,
+body.ir-contact div.wpcf7-mail.sent-ok {
+  clear: both;
+}
 body.contact .your-message span.wpcf7-not-valid-tip,
 body.ir-contact .your-message span.wpcf7-not-valid-tip {
   top: 50%;
