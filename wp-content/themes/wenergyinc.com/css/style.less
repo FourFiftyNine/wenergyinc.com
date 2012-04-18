@@ -126,6 +126,10 @@ a:hover {
   width: 960px;
 }
 
+.separator() {
+    border-top: 1px solid @lightGrey;
+    border-bottom: 1px solid #d1d1d1;
+}
 /* =============================================================================
    Typeface
    ========================================================================== */
@@ -682,8 +686,7 @@ body.admin-bar .navbar-fixed-top { top: 28px; }
     }
 
     article {
-        border-top: 1px solid @lightGrey;
-        border-bottom: 1px solid #bfbfbf;
+        .separator();
         &.first {
             border-top: none;
         }
@@ -1089,18 +1092,22 @@ body.faq {
     }
 }
 /* ============================================
-    FAQ Page
+    SEC Filings Page
    ========================================= */
 body.sec-filings {
     #main {
+        #page #the-content {
+            .gradientGreyBlock();
+            padding: 0;
+        }
+        padding: 0;
         ul {
-            padding: 20px;
+            padding: 0;
         }
         li {
             list-style: none;
-            padding-bottom: 20px;
-            margin-bottom: 20px;
-            border-bottom: 1px solid @lighterGrey;
+            margin: 0 20px;
+            .separator();
             b {
 
                 padding: 0 2px 0 10px;
@@ -1230,8 +1237,7 @@ body.error404 {
         .twtr-widget {
             
             .twtr-tweet {
-                border-top: 1px solid @lightGrey;
-                border-bottom: 1px solid #bfbfbf;
+                .separator();
             }
 
             .twtr-hd {
@@ -1277,7 +1283,7 @@ body.error404 {
 
 
 /* =============================================================================
-   Posts
+   Post Listing
    ========================================================================== */
 
 .hentry header { }
@@ -1286,39 +1292,45 @@ body.error404 {
 .hentry p.byline { }
 .hentry footer { clear: both; }
 
+body.archive #main,
+body.single-post #main {
+    border: 1px solid @grey;
+    .box-shadow(0 1px 2px rgba(0,0,0,.21));
+    position: relative;
+    .gradientGreyBlock();
+}
+.page-header {
+    height: 35px;
+    line-height: 35px;
+    .gradientGrey();
+    border-bottom: 1px solid @purple;
+    h1 {
+        float: left;
+        margin: 0 10px;
+        font-size: 16px;
+        text-transform: uppercase;
+        color: @darkGrey;
+        a {
+            color: @darkGrey;
+
+            &:hover {
+                color: @purple;
+            }
+        }
+    }
+}
+
+
 body.archive #main {
+
+
     article {
-        border-top: 1px solid @lightGrey;
-        border-bottom: 1px solid #bfbfbf;
+        .separator();
         &.first {
             border-top: none;
         }
         &.last {
             border-bottom: none;
-        }
-    }
-    border: 1px solid @grey;
-    .box-shadow(0 1px 2px rgba(0,0,0,.21));
-    position: relative;
-    .gradientGreyBlock();
-    .page-header {
-        height: 35px;
-        line-height: 35px;
-        .gradientGrey();
-        border-bottom: 1px solid @purple;
-        h1 {
-            float: left;
-            margin: 0 10px;
-            font-size: 16px;
-            text-transform: uppercase;
-            color: @darkGrey;
-            a {
-                color: @darkGrey;
-
-                &:hover {
-                    color: @purple;
-                }
-            }
         }
     }
     .post-content {
@@ -1328,6 +1340,43 @@ body.archive #main {
         .entry-content {
             font-size: 11px;
             line-height: 15px;
+        }
+    }
+}
+
+
+/* =============================================================================
+   Individual Posts (Single.php)
+   ========================================================================== */
+body.single-post {
+    #content {
+        .post-meta {
+            height: 35px;
+            line-height: 35px;
+            margin-bottom: 15px;
+            font-size: 11px;
+            color: @darkGrey;
+            time {
+                font-style: normal !important;
+            }
+        }
+        .addthis_toolbox {
+            clear: both;
+            margin-bottom: 20px;
+        }
+
+        h1.entry-title {
+            font-size: 18px;
+            text-transform: none;
+            margin: 0 0 15px;
+            padding: 0;
+        }
+
+        article {
+            padding: 25px;
+        }
+        footer {
+            display: none;
         }
     }
 }

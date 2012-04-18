@@ -4,6 +4,11 @@
     <?php roots_main_before(); ?>
       <div id="main" class="<?php echo MAIN_CLASSES; ?>" role="main">
         <?php roots_loop_before(); ?>
+        <div class="page-header">
+          <?php $cat = get_the_category(); ?>
+          <h1><?php echo $cat[0]->name ?></h1>
+        </div>
+
         <?php get_template_part('loop', 'single'); ?>
         <?php roots_loop_after(); ?>
       </div><!-- /#main -->

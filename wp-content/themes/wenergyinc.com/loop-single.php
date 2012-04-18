@@ -5,11 +5,11 @@
     <?php roots_post_inside_before(); ?>
       <header class="clearfix">
         <h1 class="entry-title"><?php the_title(); ?></h1>
-        <div class="clearfix">
+        <div class="post-meta clearfix">
            <a href="<?php comments_link(); ?>" class="comments">
              <?php comments_number( '<span>0</span> Comments', '<span>1</span> Comment', '% Comments' ); ?>&nbsp;&nbsp;&nbsp;&nbsp;|
            </a>
-          <time datetime="<?php the_time('Y-m-d')?>"><?php the_time('n/j/y') ?>&nbsp;&nbsp;&nbsp;&nbsp;|
+          <time datetime="<?php the_time('Y-m-d')?>"><?php the_time('n/j/y') ?>
           </time>
         </div>
         <!-- AddThis Button BEGIN -->

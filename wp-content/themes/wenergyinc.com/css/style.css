@@ -841,7 +841,7 @@ body.admin-bar .navbar-fixed-top {
 }
 .block article {
   border-top: 1px solid #f6f6f6;
-  border-bottom: 1px solid #bfbfbf;
+  border-bottom: 1px solid #d1d1d1;
 }
 .block article.first {
   border-top: none;
@@ -1206,16 +1206,31 @@ body.faq strong {
   color: #ff8000;
 }
 /* ============================================
-    FAQ Page
+    SEC Filings Page
    ========================================= */
+body.sec-filings #main {
+  padding: 0;
+}
+body.sec-filings #main #page #the-content {
+  background: #e0e0e0;
+  background: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiA/Pgo8c3ZnIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgd2lkdGg9IjEwMCUiIGhlaWdodD0iMTAwJSIgdmlld0JveD0iMCAwIDEgMSIgcHJlc2VydmVBc3BlY3RSYXRpbz0ibm9uZSI+CiAgPGxpbmVhckdyYWRpZW50IGlkPSJncmFkLXVjZ2ctZ2VuZXJhdGVkIiBncmFkaWVudFVuaXRzPSJ1c2VyU3BhY2VPblVzZSIgeDE9IjAlIiB5MT0iMCUiIHgyPSIwJSIgeTI9IjEwMCUiPgogICAgPHN0b3Agb2Zmc2V0PSIwJSIgc3RvcC1jb2xvcj0iI2Y0ZjRmNCIgc3RvcC1vcGFjaXR5PSIxIi8+CiAgICA8c3RvcCBvZmZzZXQ9IjEwMCUiIHN0b3AtY29sb3I9IiNlMGUwZTAiIHN0b3Atb3BhY2l0eT0iMSIvPgogIDwvbGluZWFyR3JhZGllbnQ+CiAgPHJlY3QgeD0iMCIgeT0iMCIgd2lkdGg9IjEiIGhlaWdodD0iMSIgZmlsbD0idXJsKCNncmFkLXVjZ2ctZ2VuZXJhdGVkKSIgLz4KPC9zdmc+);
+  background: -moz-linear-gradient(top, #f4f4f4 0%, #e0e0e0 100%);
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #f4f4f4), color-stop(100%, #e0e0e0));
+  background: -webkit-linear-gradient(top, #f4f4f4 0%, #e0e0e0 100%);
+  background: -o-linear-gradient(top, #f4f4f4 0%, #e0e0e0 100%);
+  background: -ms-linear-gradient(top, #f4f4f4 0%, #e0e0e0 100%);
+  background: linear-gradient(top, #f4f4f4 0%, #e0e0e0 100%);
+  filter: progid:dximagetransform.microsoft.gradient(startColorstr='#f4f4f4', endColorstr='#e0e0e0', GradientType=0);
+  padding: 0;
+}
 body.sec-filings #main ul {
-  padding: 20px;
+  padding: 0;
 }
 body.sec-filings #main li {
   list-style: none;
-  padding-bottom: 20px;
-  margin-bottom: 20px;
-  border-bottom: 1px solid #e4e6e9;
+  margin: 0 20px;
+  border-top: 1px solid #f6f6f6;
+  border-bottom: 1px solid #d1d1d1;
 }
 body.sec-filings #main li b {
   padding: 0 2px 0 10px;
@@ -1339,7 +1354,7 @@ body.error404 #content #main {
 }
 #sidebar #twitter .twtr-widget .twtr-tweet {
   border-top: 1px solid #f6f6f6;
-  border-bottom: 1px solid #bfbfbf;
+  border-bottom: 1px solid #d1d1d1;
 }
 #sidebar #twitter .twtr-widget .twtr-hd {
   display: none;
@@ -1384,7 +1399,7 @@ body.error404 #content #main {
   border-bottom: 0;
 }
 /* =============================================================================
-   Posts
+   Post Listing
    ========================================================================== */
 .hentry h2 a {
   text-decoration: none;
@@ -1395,7 +1410,8 @@ body.error404 #content #main {
 .hentry footer {
   clear: both;
 }
-body.archive #main {
+body.archive #main,
+body.single-post #main {
   border: 1px solid #e0e0e0;
   -webkit-box-shadow: 0 1px 2px rgba(0, 0, 0, 0.21);
   -moz-box-shadow: 0 1px 2px rgba(0, 0, 0, 0.21);
@@ -1411,17 +1427,7 @@ body.archive #main {
   background: linear-gradient(top, #f4f4f4 0%, #e0e0e0 100%);
   filter: progid:dximagetransform.microsoft.gradient(startColorstr='#f4f4f4', endColorstr='#e0e0e0', GradientType=0);
 }
-body.archive #main article {
-  border-top: 1px solid #f6f6f6;
-  border-bottom: 1px solid #bfbfbf;
-}
-body.archive #main article.first {
-  border-top: none;
-}
-body.archive #main article.last {
-  border-bottom: none;
-}
-body.archive #main .page-header {
+.page-header {
   height: 35px;
   line-height: 35px;
   background: #eeeeee;
@@ -1435,18 +1441,28 @@ body.archive #main .page-header {
   filter: progid:dximagetransform.microsoft.gradient(startColorstr='#eeeeee', endColorstr='#e0e0e0', GradientType=0);
   border-bottom: 1px solid #7b2353;
 }
-body.archive #main .page-header h1 {
+.page-header h1 {
   float: left;
   margin: 0 10px;
   font-size: 16px;
   text-transform: uppercase;
   color: #5c5c5c;
 }
-body.archive #main .page-header h1 a {
+.page-header h1 a {
   color: #5c5c5c;
 }
-body.archive #main .page-header h1 a:hover {
+.page-header h1 a:hover {
   color: #7b2353;
+}
+body.archive #main article {
+  border-top: 1px solid #f6f6f6;
+  border-bottom: 1px solid #d1d1d1;
+}
+body.archive #main article.first {
+  border-top: none;
+}
+body.archive #main article.last {
+  border-bottom: none;
 }
 body.archive #main .post-content h2 {
   margin: 25px 0 15px;
@@ -1454,6 +1470,35 @@ body.archive #main .post-content h2 {
 body.archive #main .post-content .entry-content {
   font-size: 11px;
   line-height: 15px;
+}
+/* =============================================================================
+   Individual Posts (Single.php)
+   ========================================================================== */
+body.single-post #content .post-meta {
+  height: 35px;
+  line-height: 35px;
+  margin-bottom: 15px;
+  font-size: 11px;
+  color: #5c5c5c;
+}
+body.single-post #content .post-meta time {
+  font-style: normal !important;
+}
+body.single-post #content .addthis_toolbox {
+  clear: both;
+  margin-bottom: 20px;
+}
+body.single-post #content h1.entry-title {
+  font-size: 18px;
+  text-transform: none;
+  margin: 0 0 15px;
+  padding: 0;
+}
+body.single-post #content article {
+  padding: 25px;
+}
+body.single-post #content footer {
+  display: none;
 }
 /* =============================================================================
    Post Comments
