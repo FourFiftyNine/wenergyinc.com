@@ -57,39 +57,45 @@ get_header(); ?>
         </section>
         <div id="bottom" class="clearfix">
           <?php 
-            $category = get_category_by_slug('press-releases'); 
+            $category = get_category_by_slug('downloads'); 
             $id = $category->term_id;
 
-            $args = array( 'numberposts' => 2, 'category' => $id);
-            $newsPostArray = get_posts( $args );
+            $args = array( 'numberposts' => 4, 'category' => $id);
+            $downloads = get_posts( $args );
           ?>
-          
           <section id="<?php echo $category->slug ?>" class="block">
               <header>
-                <h1><a href="/<?php echo $category->slug ?>">PRESS&nbsp;&nbsp;<strong>RELEASES</strong></a></h1>
+                <h1><a href="/<?php echo $category->slug ?>">POPULAR&nbsp;&nbsp;<strong>DOWNLOADS</strong></a></h1>
               </header>
-              <?php foreach($newsPostArray as $post) : setup_postdata($post); ?>
+              <?php foreach($downloads as $post) : setup_postdata($post); ?>
                 <article>
                   <header>
                     <h2><a href="<?php echo get_permalink($post->ID) ?>"><?php echo $post->post_title; ?></a></h2>
                   </header>
-                  <?php my_excerpt(40); ?>
+                  <?php the_content(); ?>
                 </article>
               <?php endforeach; ?>
               <footer>
                 <a  href="/<?php echo $category->slug ?>">View More</a>
               </footer>
           </section>
+          <?php 
+            $category = get_category_by_slug('press-releases'); 
+            $id = $category->term_id;
+
+            $args = array( 'numberposts' => 2, 'category' => $id);
+            $pressReleases = get_posts( $args );
+          ?>
           <section id="<?php echo $category->slug ?>" class="block">
               <header>
                 <h1><a href="/<?php echo $category->slug ?>">PRESS&nbsp;&nbsp;<strong>RELEASES</strong></a></h1>
               </header>
-              <?php foreach($newsPostArray as $post) : setup_postdata($post); ?>
+              <?php foreach($pressReleases as $post) : setup_postdata($post); ?>
                 <article>
                   <header>
                     <h2><a href="<?php echo get_permalink($post->ID) ?>"><?php echo $post->post_title; ?></a></h2>
                   </header>
-                  <?php my_excerpt(25); ?>
+                  <?php my_excerpt(13); ?>
                 </article>
               <?php endforeach; ?>
               <footer>

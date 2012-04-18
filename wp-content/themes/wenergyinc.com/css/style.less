@@ -714,7 +714,8 @@ body.admin-bar .navbar-fixed-top { top: 28px; }
         margin-right: 26px;
     }
 }
-section#press-releases {
+section#press-releases,
+section#downloads {
     h2 {
         margin: 15px;
     }
@@ -726,6 +727,14 @@ section#press-releases {
         a:hover {
             text-decoration: underline;
         }
+    }
+}
+section#downloads {
+    h2 {
+        margin: 12px 15px;
+    }
+    p {
+        margin: 5px 15px 15px;
     }
 }
 .lt-ie9 .block header h2 { font-size: 17px; }
@@ -1058,13 +1067,18 @@ body.press-releases {
     }
 }
 
-body.news.single {
+body.news {
     #content {
         #main {
-            // width: 630px;
+            .post-content {
+                footer {
+                    display: none;
+                }
+            }
         }
     }
 }
+
 /* ============================================
     Board of directors / Management
    ========================================= */
@@ -1114,6 +1128,7 @@ body.sec-filings {
                         color: @purple;
                     }
                 }
+            }
         }
         padding: 0;
         ul {

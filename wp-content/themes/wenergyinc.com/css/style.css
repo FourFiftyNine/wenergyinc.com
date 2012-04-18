@@ -867,18 +867,29 @@ body.admin-bar .navbar-fixed-top {
 #bottom .block:first-child {
   margin-right: 26px;
 }
-section#press-releases h2 {
+section#press-releases h2,
+section#downloads h2 {
   margin: 15px;
 }
-section#press-releases p {
+section#press-releases p,
+section#downloads p {
   margin: 15px;
 }
 section#press-releases p a,
-section#press-releases p a:visited {
+section#downloads p a,
+section#press-releases p a:visited,
+section#downloads p a:visited {
   color: #7b2353;
 }
-section#press-releases p a:hover {
+section#press-releases p a:hover,
+section#downloads p a:hover {
   text-decoration: underline;
+}
+section#downloads h2 {
+  margin: 12px 15px;
+}
+section#downloads p {
+  margin: 5px 15px 15px;
 }
 .lt-ie9 .block header h2 {
   font-size: 17px;
@@ -1184,6 +1195,9 @@ body.press-releases #content #main #the-content ul {
   padding: 0;
   list-style: none;
 }
+body.news #content #main .post-content footer {
+  display: none;
+}
 /* ============================================
     Board of directors / Management
    ========================================= */
@@ -1236,11 +1250,17 @@ body.sec-filings #main #page #the-content .rsspaging:after {
 body.sec-filings #main #page #the-content .rsspaging:after {
   clear: both;
 }
-body.sec-filings #main #page #the-content .rsspaging a.rsspaging_prev {
+body.sec-filings #main #page #the-content .rsspaging a.rsspaging_prev,
+body.sec-filings #main #page #the-content .rsspaging a:visited.rsspaging_prev {
   float: left;
 }
-body.sec-filings #main #page #the-content .rsspaging a.rsspaging_next {
+body.sec-filings #main #page #the-content .rsspaging a.rsspaging_next,
+body.sec-filings #main #page #the-content .rsspaging a:visited.rsspaging_next {
   float: right;
+}
+body.sec-filings #main #page #the-content .rsspaging a:hover,
+body.sec-filings #main #page #the-content .rsspaging a:visited:hover {
+  color: #7b2353;
 }
 body.sec-filings #main ul {
   padding: 0;
