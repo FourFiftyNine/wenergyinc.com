@@ -1099,19 +1099,45 @@ body.sec-filings {
         #page #the-content {
             .gradientGreyBlock();
             padding: 0;
+
+            .rsspaging {
+                .clearfix();
+                padding: 10px 30px 20px;
+                a,a:visited {
+                    &.rsspaging_prev {
+                        float: left;
+                    }
+                    &.rsspaging_next {
+                        float: right;
+                    }
+                    &:hover {
+                        color: @purple;
+                    }
+                }
         }
         padding: 0;
         ul {
             padding: 0;
+            > p {
+                display: none;
+            }
+            > div {
+                .separator();
+            }
         }
+
         li {
             list-style: none;
-            margin: 0 20px;
-            .separator();
+            margin: 0 0;
+            padding: 15px;
+            a:hover {
+                color: @purple;
+            }
             b {
 
                 padding: 0 2px 0 10px;
             }
+
         }
     }
 }

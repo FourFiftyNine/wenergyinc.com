@@ -1223,14 +1223,42 @@ body.sec-filings #main #page #the-content {
   filter: progid:dximagetransform.microsoft.gradient(startColorstr='#f4f4f4', endColorstr='#e0e0e0', GradientType=0);
   padding: 0;
 }
+body.sec-filings #main #page #the-content .rsspaging {
+  *zoom: 1;
+  *zoom: 1;
+  padding: 10px 30px 20px;
+}
+body.sec-filings #main #page #the-content .rsspaging:before,
+body.sec-filings #main #page #the-content .rsspaging:after {
+  display: table;
+  content: "";
+}
+body.sec-filings #main #page #the-content .rsspaging:after {
+  clear: both;
+}
+body.sec-filings #main #page #the-content .rsspaging a.rsspaging_prev {
+  float: left;
+}
+body.sec-filings #main #page #the-content .rsspaging a.rsspaging_next {
+  float: right;
+}
 body.sec-filings #main ul {
   padding: 0;
 }
-body.sec-filings #main li {
-  list-style: none;
-  margin: 0 20px;
+body.sec-filings #main ul > p {
+  display: none;
+}
+body.sec-filings #main ul > div {
   border-top: 1px solid #f6f6f6;
   border-bottom: 1px solid #d1d1d1;
+}
+body.sec-filings #main li {
+  list-style: none;
+  margin: 0 0;
+  padding: 15px;
+}
+body.sec-filings #main li a:hover {
+  color: #7b2353;
 }
 body.sec-filings #main li b {
   padding: 0 2px 0 10px;
