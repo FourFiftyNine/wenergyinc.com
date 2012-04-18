@@ -1134,6 +1134,9 @@ body.page article > header > h1 {
   left: -5px;
   top: 55px;
 }
+body.page .blocke article header {
+  background: none;
+}
 body.about-worthington article > header {
   background: url(../img/about-worthington.png) right center;
 }
