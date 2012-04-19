@@ -956,8 +956,44 @@ body.home {
 
 body.search {
     #main {
+        border: 1px solid @grey;
         article {
-            margin-bottom: 20px;
+            .gradientGreyBlock();
+            .separator();
+            margin-bottom: 0px;
+
+
+        }
+
+        .pager {
+            display: block;
+            height: 40px;
+            line-height: 40px;
+            .gradientGrey;
+            padding-left: 20px;
+            border-right: 1px solid @grey;
+        }
+        .post-content {
+            h2 {
+                margin-bottom: 5px;
+                margin-left:0;
+            }
+            padding-bottom: 10px;
+            footer {
+                line-height: inherit;
+                time {
+                    font-size: 15px;
+                    float: none;
+                    margin-left: 0;
+                }
+                .read-more,
+                .comments {
+                    display: none;
+                }
+                .author {
+                    display: block;
+                }
+            }
         }
     }
 }
@@ -1589,20 +1625,7 @@ footer {
         nav.social {
             margin: 0 20px 20px;
         }
-        .email {
-            margin: 0 20px;
-            position: relative;
-            top: 4px;
-            background: url(../img/icon-email.png) no-repeat center center;
-            height: 11px;
-            width: 16px;
-            float: left;
-            &:hover {
-                opacity: 0.8;
-                -moz-opacity: 0.8;
-                filter:alpha(opacity=8);
-            }
-        }
+
     }
 
     .copy {
@@ -1627,7 +1650,20 @@ footer {
 #content-info p small { font-size: 13px; }
 
 
-
+.email {
+    margin: 0 20px;
+    position: relative;
+    top: 4px;
+    background: url(../img/icon-email.png) no-repeat center center;
+    height: 11px;
+    width: 16px;
+    float: left;
+    &:hover {
+        opacity: 0.8;
+        -moz-opacity: 0.8;
+        filter:alpha(opacity=8);
+    }
+}
 /* =============================================================================
    WordPress Generated Classes
    See: http://codex.wordpress.org/CSS#WordPress_Generated_Classes

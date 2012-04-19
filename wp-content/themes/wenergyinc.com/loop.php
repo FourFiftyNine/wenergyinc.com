@@ -29,14 +29,17 @@
             <h2><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h2>
           </header>
           <div class="entry-content">
-            <?php if (is_archive() || is_search() || is_front_page()) { ?>
-              <?php my_excerpt(50); ?>
-            <?php } else { ?>
-              <?php the_content(); ?>
+            <?php $categories = get_the_category($post->ID); ?>
+            <?php if($categories[0]->category_nicename != 'downloads') { ?>
+             <?php if (is_archive() || is_search() || is_front_page() ) { ?>
+                <?php my_excerpt(50); ?>
+            <?php   } 
+                    } else {
+                  the_content(); ?>
             <?php } ?>
           </div>
 
-          <?php $categories = get_the_category($post->ID); ?>
+          
           <footer>
              <a href="<?php comments_link(); ?>" class="comments">
                <?php comments_number( '<span>0</span> Comments', '<span>1</span> Comment', '% Comments' ); ?>&nbsp;&nbsp;&nbsp;&nbsp;|

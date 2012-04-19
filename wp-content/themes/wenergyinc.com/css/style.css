@@ -1090,8 +1090,60 @@ body.home #blog article header h2 {
   opacity: 0.8;
   filter: alpha(opacity=80);
 }
+body.search #main {
+  border: 1px solid #e0e0e0;
+}
 body.search #main article {
-  margin-bottom: 20px;
+  background: #e0e0e0;
+  background: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiA/Pgo8c3ZnIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgd2lkdGg9IjEwMCUiIGhlaWdodD0iMTAwJSIgdmlld0JveD0iMCAwIDEgMSIgcHJlc2VydmVBc3BlY3RSYXRpbz0ibm9uZSI+CiAgPGxpbmVhckdyYWRpZW50IGlkPSJncmFkLXVjZ2ctZ2VuZXJhdGVkIiBncmFkaWVudFVuaXRzPSJ1c2VyU3BhY2VPblVzZSIgeDE9IjAlIiB5MT0iMCUiIHgyPSIwJSIgeTI9IjEwMCUiPgogICAgPHN0b3Agb2Zmc2V0PSIwJSIgc3RvcC1jb2xvcj0iI2Y0ZjRmNCIgc3RvcC1vcGFjaXR5PSIxIi8+CiAgICA8c3RvcCBvZmZzZXQ9IjEwMCUiIHN0b3AtY29sb3I9IiNlMGUwZTAiIHN0b3Atb3BhY2l0eT0iMSIvPgogIDwvbGluZWFyR3JhZGllbnQ+CiAgPHJlY3QgeD0iMCIgeT0iMCIgd2lkdGg9IjEiIGhlaWdodD0iMSIgZmlsbD0idXJsKCNncmFkLXVjZ2ctZ2VuZXJhdGVkKSIgLz4KPC9zdmc+);
+  background: -moz-linear-gradient(top, #f4f4f4 0%, #e0e0e0 100%);
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #f4f4f4), color-stop(100%, #e0e0e0));
+  background: -webkit-linear-gradient(top, #f4f4f4 0%, #e0e0e0 100%);
+  background: -o-linear-gradient(top, #f4f4f4 0%, #e0e0e0 100%);
+  background: -ms-linear-gradient(top, #f4f4f4 0%, #e0e0e0 100%);
+  background: linear-gradient(top, #f4f4f4 0%, #e0e0e0 100%);
+  filter: progid:dximagetransform.microsoft.gradient(startColorstr='#f4f4f4', endColorstr='#e0e0e0', GradientType=0);
+  border-top: 1px solid #f6f6f6;
+  border-bottom: 1px solid #d1d1d1;
+  margin-bottom: 0px;
+}
+body.search #main .pager {
+  display: block;
+  height: 40px;
+  line-height: 40px;
+  background: #eeeeee;
+  background: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiA/Pgo8c3ZnIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgd2lkdGg9IjEwMCUiIGhlaWdodD0iMTAwJSIgdmlld0JveD0iMCAwIDEgMSIgcHJlc2VydmVBc3BlY3RSYXRpbz0ibm9uZSI+CiAgPGxpbmVhckdyYWRpZW50IGlkPSJncmFkLXVjZ2ctZ2VuZXJhdGVkIiBncmFkaWVudFVuaXRzPSJ1c2VyU3BhY2VPblVzZSIgeDE9IjAlIiB5MT0iMCUiIHgyPSIwJSIgeTI9IjEwMCUiPgogICAgPHN0b3Agb2Zmc2V0PSIwJSIgc3RvcC1jb2xvcj0iI2VlZWVlZSIgc3RvcC1vcGFjaXR5PSIxIi8+CiAgICA8c3RvcCBvZmZzZXQ9IjEwMCUiIHN0b3AtY29sb3I9IiNlMGUwZTAiIHN0b3Atb3BhY2l0eT0iMSIvPgogIDwvbGluZWFyR3JhZGllbnQ+CiAgPHJlY3QgeD0iMCIgeT0iMCIgd2lkdGg9IjEiIGhlaWdodD0iMSIgZmlsbD0idXJsKCNncmFkLXVjZ2ctZ2VuZXJhdGVkKSIgLz4KPC9zdmc+);
+  background: -moz-linear-gradient(top, #eeeeee 0%, #e0e0e0 100%);
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #eeeeee), color-stop(100%, #e0e0e0));
+  background: -webkit-linear-gradient(top, #eeeeee 0%, #e0e0e0 100%);
+  background: -o-linear-gradient(top, #eeeeee 0%, #e0e0e0 100%);
+  background: -ms-linear-gradient(top, #eeeeee 0%, #e0e0e0 100%);
+  background: linear-gradient(top, #eeeeee 0%, #e0e0e0 100%);
+  filter: progid:dximagetransform.microsoft.gradient(startColorstr='#eeeeee', endColorstr='#e0e0e0', GradientType=0);
+  padding-left: 20px;
+  border-right: 1px solid #e0e0e0;
+}
+body.search #main .post-content {
+  padding-bottom: 10px;
+}
+body.search #main .post-content h2 {
+  margin-bottom: 5px;
+  margin-left: 0;
+}
+body.search #main .post-content footer {
+  line-height: inherit;
+}
+body.search #main .post-content footer time {
+  font-size: 15px;
+  float: none;
+  margin-left: 0;
+}
+body.search #main .post-content footer .read-more,
+body.search #main .post-content footer .comments {
+  display: none;
+}
+body.search #main .post-content footer .author {
+  display: block;
 }
 /* ============================================
     Pages
@@ -1713,20 +1765,6 @@ footer #main-footer .contact-info {
 footer #main-footer nav.social {
   margin: 0 20px 20px;
 }
-footer #main-footer .email {
-  margin: 0 20px;
-  position: relative;
-  top: 4px;
-  background: url(../img/icon-email.png) no-repeat center center;
-  height: 11px;
-  width: 16px;
-  float: left;
-}
-footer #main-footer .email:hover {
-  opacity: 0.8;
-  -moz-opacity: 0.8;
-  filter: alpha(opacity=8);
-}
 footer .copy {
   clear: both;
   float: right;
@@ -1747,6 +1785,20 @@ footer .copy a:visited.privacy-link {
 }
 #content-info p small {
   font-size: 13px;
+}
+.email {
+  margin: 0 20px;
+  position: relative;
+  top: 4px;
+  background: url(../img/icon-email.png) no-repeat center center;
+  height: 11px;
+  width: 16px;
+  float: left;
+}
+.email:hover {
+  opacity: 0.8;
+  -moz-opacity: 0.8;
+  filter: alpha(opacity=8);
 }
 /* =============================================================================
    WordPress Generated Classes
