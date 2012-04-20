@@ -49,7 +49,8 @@
       <strong>Worthington Energy, Inc.</strong> <br /><br />
       220 Montgomery Street, Suite 1094 <br />
       San Francisco, CA 94104 <br />
-      <strong>T</strong>:(415) 529-3480 main
+      <strong>T</strong>:(415) 529-3480 <br />
+      <strong>F</strong>:(415) 592-5990
     </article>
   </section>
   <?php //dynamic_sidebar('roots-sidebar'); ?>
