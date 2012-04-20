@@ -16,12 +16,13 @@
             <strong>Worthington Energy, Inc.</strong> <br />
             220 Montgomery Street, Suite 1094 <br />
             San Francisco, CA 94104 <br />
-            <strong>T</strong>: (415) 529-3480 
+            <strong>T</strong>: (415) 529-3480&nbsp;&nbsp;<strong>F</strong>: (415) 592-5990
           </p>
           <a href="mailto:info@wenergyinc.com" class="email"></a>  
           <nav class="social clearfix">
             <ul>
               <!-- <li><a class="linkedin" href="http://todo-url.com"><span>linknedin</span></a></li> -->
+              <li><a class="email" href="ir@wenergyinc.com" class="email"></a>  </li>
               <li><a class="twitter" href="http://twitter.com/wenergyinc"><span>twitter</span></a></li>
               <li><a class="facebook" href="http://www.facebook.com/WorthingtonEnergy"><span>facebook</span></a></li>
               <li><a class="youtube" href="http://www.youtube.com/wenergyinc"><span>youtube</span></a></li>

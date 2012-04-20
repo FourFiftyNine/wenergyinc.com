@@ -321,7 +321,7 @@ h2 {
    Inputs
    ========================================================================== */
 label {
-  color: #e4e6e9;
+  color: #5c5c5c;
 }
 input[type="text"],
 textarea {
@@ -872,27 +872,27 @@ body.admin-bar .navbar-fixed-top {
   margin-right: 26px;
 }
 section#press-releases h2,
-section#downloads h2 {
+section#news h2 {
   margin: 15px;
 }
 section#press-releases p,
-section#downloads p {
+section#news p {
   margin: 15px;
 }
 section#press-releases p a,
-section#downloads p a,
+section#news p a,
 section#press-releases p a:visited,
-section#downloads p a:visited {
+section#news p a:visited {
   color: #7b2353;
 }
 section#press-releases p a:hover,
-section#downloads p a:hover {
+section#news p a:hover {
   text-decoration: underline;
 }
-section#downloads h2 {
+section#news h2 {
   margin: 12px 15px;
 }
-section#downloads p {
+section#news p {
   margin: 5px 15px 15px;
 }
 .lt-ie9 .block header h2 {
@@ -901,22 +901,7 @@ section#downloads p {
 section#news {
   float: left;
   width: 300px;
-  height: 334px;
-}
-section#news h1 {
-  margin: 0;
-  padding: 20px 20px;
-  border-bottom: 1px solid #bebebe;
-  margin: 0;
-  padding: 0 20px;
-  height: 45px;
-  line-height: 45px;
-  background-color: #f4f3f3;
-  border: none;
-  border-bottom: 1px solid #f6f6f6;
-  -webkit-box-shadow: 0 0 15px #e4e6e9 inset;
-  -moz-box-shadow: 0 0 15px #e4e6e9 inset;
-  box-shadow: 0 0 15px #e4e6e9 inset;
+  height: 350px;
 }
 section#news article {
   border-top: none;
@@ -962,12 +947,16 @@ body.home #featured-post #feature-excerpt .text {
   width: 400px;
 }
 body.home #featured-post #feature-excerpt h2 {
-  font-size: 27px;
+  font-size: 18px;
   margin: 18px 30px;
+}
+body.home #featured-post #feature-excerpt h2 a {
+  color: #ffffff;
 }
 body.home #featured-post #feature-excerpt p {
   font-size: 11px;
   margin: 18px 30px;
+  line-height: 18px;
 }
 body.home #featured-post #feature-excerpt .btn {
   position: relative;
@@ -1391,8 +1380,8 @@ body.ir-contact div.wpcf7-validation-errors {
   border-color: #ae2b28;
   clear: both;
 }
-body.contact div.wpcf7-mail.sent-ok,
-body.ir-contact div.wpcf7-mail.sent-ok {
+body.contact div.wpcf7-mail-sent-ok,
+body.ir-contact div.wpcf7-mail-sent-ok {
   clear: both;
 }
 body.contact .your-message span.wpcf7-not-valid-tip,
@@ -1648,11 +1637,27 @@ body.single-post #content footer {
 #respond,
 #submit {
   clear: both;
-  display: none;
+  display: block;
 }
 ol.commentlist img.avatar {
   float: left;
   margin-right: 10px;
+}
+#commentform label {
+  display: block;
+}
+#commentform input {
+  display: block;
+  margin-bottom: 15px;
+}
+#commentform textarea {
+  height: 100px;
+  margin-bottom: 15px;
+  min-width: 100%;
+  width: 100%;
+}
+#commentform input[type="submit"] {
+  float: right;
 }
 /* =============================================================================
    Footer
@@ -1786,16 +1791,10 @@ footer .copy a:visited.privacy-link {
 #content-info p small {
   font-size: 13px;
 }
-.email {
-  margin: 0 20px;
-  position: relative;
-  top: 4px;
+nav.social li a.email {
   background: url(../img/icon-email.png) no-repeat center center;
-  height: 11px;
-  width: 16px;
-  float: left;
 }
-.email:hover {
+nav.social li a.email:hover {
   opacity: 0.8;
   -moz-opacity: 0.8;
   filter: alpha(opacity=8);

@@ -5,25 +5,44 @@ Template Name: Frontpage
 get_header(); ?>
     <div id="content" class="<?php echo CONTAINER_CLASSES; ?>">
       <div id="main" role="main" class="clearfix">
+        <?php
+        $page_num = $paged;
+        if ($pagenum='') $pagenum =1;
+        query_posts('showposts=1&category_name=featured&paged='.$page_num); 
+        ?>
+        <?php if (have_posts()) : ?>
+        <?php $count == 0; ?>
+        <?php while (have_posts()) : the_post(); ?>
+          <?php $class = (!$count) ? 'clearfix first' : 'last clearfix'; ?>
+   
+              <?php 
+              if ( has_post_thumbnail() ) :
+                // the_post_thumbnail();
+              endif;
+               ?>
+       
+
         <div id="featured-post">
           <img id="welcome-image" src="<?php echo get_template_directory_uri() . 'img/home.jpg' ?>" width="628" alt="" />
           <div id="feature-excerpt">
             <div class="text">
-              <h2>Feature Title</h2>
-              <p>Donec bibendum blandit faucibus. Sed adipiscing iaculis mattis. Duis hendrerit enim at nunc pulvinar viverra laoreet elit aliquet. </p>
+              <h2><a href="<?php echo get_permalink() ?>"><?php the_title(); ?></a></h2>
+              <p><?php my_excerpt(12); ?> </p>
             </div>
-            <a class="btn grey" href="/link" id="feature-link">Find Out <strong>More</strong><span class="arrow"></span></a>
+            <a class="btn grey" href="<?php echo get_permalink() ?>" id="feature-link">Find Out <strong>More</strong><span class="arrow"></span></a>
           </div>
         </div>
+          <?php $count++; ?>
+        <?php endwhile;endif; ?>
         <section id="blog" class="block">
           <header class="clearfix">
-            <h1>FROM THE&nbsp;&nbsp;<strong>BLOG</strong></h1>
+            <h1>PRESS&nbsp;&nbsp;<strong>RELEASES</strong></strong></h1>
             <a class="read-all" href="/blog">Read All</a>
           </header>
           <?php
           $page_num = $paged;
           if ($pagenum='') $pagenum =1;
-          query_posts('showposts=2&category_name=blog&paged='.$page_num); 
+          query_posts('showposts=2&category_name=press-releases&paged='.$page_num); 
           ?>
           <?php if (have_posts()) : ?>
           <?php $count == 0; ?>
@@ -37,7 +56,8 @@ get_header(); ?>
                 endif;
                  ?>
               </div>
-              <div class="post-content">
+              <?php $class = (has_post_thumbnail()) ? 'post-content' : 'post-content no-thumb'  ?>
+              <div class="<?php echo $class ?>">
                <header>
                  <h2><a href="<?php get_permalink() ?>"><?php the_title(); ?></a></h2>
                </header>
@@ -56,7 +76,7 @@ get_header(); ?>
           <?php endwhile;endif; ?>
         </section>
         <div id="bottom" class="clearfix">
-          <?php 
+          <?php /*
             $category = get_category_by_slug('downloads'); 
             $id = $category->term_id;
 
@@ -79,16 +99,17 @@ get_header(); ?>
                 <a  href="/<?php echo $category->slug ?>">View More</a>
               </footer>
           </section>
+          */ ?>
           <?php 
-            $category = get_category_by_slug('press-releases'); 
+            $category = get_category_by_slug('news'); 
             $id = $category->term_id;
 
-            $args = array( 'numberposts' => 2, 'category' => $id);
+            $args = array( 'numberposts' => 4, 'category' => $id);
             $pressReleases = get_posts( $args );
           ?>
           <section id="<?php echo $category->slug ?>" class="block">
               <header>
-                <h1><a href="/<?php echo $category->slug ?>">PRESS&nbsp;&nbsp;<strong>RELEASES</strong></a></h1>
+                <h1><a href="/<?php echo $category->slug ?>">WE&nbsp;&nbsp;<strong>NEWS</strong></a></h1>
               </header>
               <?php foreach($pressReleases as $post) : setup_postdata($post); ?>
                 <article>
@@ -101,6 +122,12 @@ get_header(); ?>
               <footer>
                 <a  href="/<?php echo $category->slug ?>">View More</a>
               </footer>
+          </section>
+          <section class="block" id="stocktwits">
+            <script type="text/javascript" src="http://stocktwits.com/addon/widget/1/stocktwits-widget.min.js"></script>
+            <script type="text/javascript">
+            StockTwitsWidget.load({ stream: '@worthingtonenergy', title: 'Worthington Energy', style: { width: '300', height: '350' } });
+            </script>
           </section>
         </div>
       </div><!-- /#main -->
