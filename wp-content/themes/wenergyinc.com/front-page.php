@@ -36,8 +36,8 @@ get_header(); ?>
         <?php endwhile;endif; ?>
         <section id="blog" class="block">
           <header class="clearfix">
-            <h1>PRESS&nbsp;&nbsp;<strong>RELEASES</strong></strong></h1>
-            <a class="read-all" href="/blog">Read All</a>
+            <h1>PRESS&nbsp;&nbsp;<strong>RELEASES</strong></h1>
+            <a class="read-all" href="/category/press-releases">Read All</a>
           </header>
           <?php
           $page_num = $paged;
@@ -49,17 +49,20 @@ get_header(); ?>
           <?php while (have_posts()) : the_post(); ?>
             <?php $class = (!$count) ? 'clearfix first' : 'last clearfix'; ?>
             <article id="post-<?php the_ID(); ?>" <?php post_class($class); ?>>
+              <?php 
+              if ( has_post_thumbnail() ) : ?>
               <div class="post-featured-thumb">
-                <?php 
-                if ( has_post_thumbnail() ) :
-                  the_post_thumbnail();
-                endif;
-                 ?>
+
+                  <?php the_post_thumbnail(); ?>
+
               </div>
+              <?php
+              endif;
+               ?>
               <?php $class = (has_post_thumbnail()) ? 'post-content' : 'post-content no-thumb'  ?>
               <div class="<?php echo $class ?>">
                <header>
-                 <h2><a href="<?php get_permalink() ?>"><?php the_title(); ?></a></h2>
+                 <h2><a href="<?php echo get_permalink() ?>"><?php the_title(); ?></a></h2>
                </header>
                <?php my_excerpt(40); ?>
                <footer class="clearfix">
@@ -68,7 +71,7 @@ get_header(); ?>
                  </a>
                 <time datetime="<?php the_time('Y-m-d')?>"><?php the_time('n/j/y') ?>&nbsp;&nbsp;&nbsp;&nbsp;|
                 </time>
-                <a class="read-more" href="<?php get_permalink() ?>">Read Post <span class="arrow"></span></a>
+                <a class="read-more" href="<?php echo get_permalink() ?>">Read Post <span class="arrow"></span></a>
                </footer>
               </div>
             </article>
@@ -104,7 +107,7 @@ get_header(); ?>
             $category = get_category_by_slug('news'); 
             $id = $category->term_id;
 
-            $args = array( 'numberposts' => 4, 'category' => $id);
+            $args = array( 'numberposts' => 3, 'category' => $id);
             $pressReleases = get_posts( $args );
           ?>
           <section id="<?php echo $category->slug ?>" class="block">
