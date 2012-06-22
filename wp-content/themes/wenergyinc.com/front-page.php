@@ -107,7 +107,7 @@ get_header(); ?>
             $category = get_category_by_slug('news'); 
             $id = $category->term_id;
 
-            $args = array( 'numberposts' => 3, 'category' => $id);
+            $args = array( 'numberposts' => 2, 'category' => $id);
             $pressReleases = get_posts( $args );
           ?>
           <section id="<?php echo $category->slug ?>" class="block">
@@ -119,7 +119,7 @@ get_header(); ?>
                   <header>
                     <h2><a href="<?php echo get_permalink($post->ID) ?>"><?php echo $post->post_title; ?></a></h2>
                   </header>
-                  <?php my_excerpt(13); ?>
+                  <?php my_excerpt(10); ?>
                 </article>
               <?php endforeach; ?>
               <footer>

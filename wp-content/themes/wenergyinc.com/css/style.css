@@ -904,14 +904,15 @@ section#news {
   height: 350px;
 }
 section#news article {
+  height: 130px;
   border-top: none;
 }
 section#news article h2 {
   margin: 10px 20px;
 }
 section#news article p {
-  font-size: 13px;
-  line-height: 20px;
+  font-size: 12px;
+  line-height: 15px;
   margin-top: 5px;
   margin-bottom: 5px;
 }
@@ -968,6 +969,9 @@ body.home #blog {
 }
 body.home #blog article header h2 {
   margin: 25px 0 15px;
+}
+body.home #news h2 {
+  font-size: 15px;
 }
 /* ============================================
     Third Row - PR, StockTwits, Twitter
