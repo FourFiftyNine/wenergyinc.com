@@ -502,6 +502,7 @@ header#banner {
   background: url(../img/bg-nav-sprite.png) no-repeat;
   background-position: right -34px;
   padding: 0 31px 0 4px;
+  font-family: 'MuseoSans500', 'sans-serif';
 }
 #banner nav#nav-main ul.menu > li > a.active,
 #banner nav#nav-main ul.menu > li > a:visited.active {
@@ -658,6 +659,7 @@ body.admin-bar .navbar-fixed-top {
   float: left;
   margin: 0 10px;
   font-size: 13px;
+  font-family: 'MuseoSans500', 'sans-serif';
 }
 #content section > header h1 strong {
   color: #232323;
@@ -670,6 +672,7 @@ body.admin-bar .navbar-fixed-top {
   font-size: 30px;
   text-transform: uppercase;
   padding-bottom: 10px;
+  font-family: 'MuseoSans500', 'sans-serif';
 }
 #content article h2 {
   color: #292929;
@@ -697,7 +700,7 @@ body.admin-bar .navbar-fixed-top {
 }
 #content article .post-content.no-thumb {
   width: 600px;
-  padding: 0 20px 20px;
+  padding: 0 20px 10px;
 }
 #content article p {
   margin: 0 10px 10px 0;
@@ -858,8 +861,8 @@ body.admin-bar .navbar-fixed-top {
 }
 .block article p {
   margin: 15px 20px 20px;
-  font-size: 11px;
-  line-height: 14px;
+  font-size: 13px;
+  line-height: 16px;
 }
 #bottom {
   margin-top: 30px;
