@@ -44,7 +44,7 @@ button,
 input,
 select,
 textarea {
-  font-family: 'MuseoSans500', sans-serif;
+  font-family: 'Arial', sans-serif;
   color: #222;
 }
 body {
@@ -1035,7 +1035,7 @@ body.home #news h2 {
 }
 #third #StockTwits_wrapper .stModuleHeader .stTitle {
   color: #464646;
-  font-family: 'MuseoSans500';
+  font-family: 'Arial';
   height: 60px;
   line-height: 60px;
   padding: 0 20px;
