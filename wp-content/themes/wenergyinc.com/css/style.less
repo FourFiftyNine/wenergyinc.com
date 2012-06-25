@@ -88,11 +88,13 @@ td { vertical-align: top; }
 @offWhite:    #f4f3f3;
 @offBlack:    #232323;
 @grey:        #e0e0e0;
-@darkGrey:    #5c5c5c;
+// @darkGrey:    #5c5c5c; old dark grey -- too
+@darkGrey:    #474747;
 @lightGrey:   #f6f6f6;
 @lighterGrey: #e4e6e9;
 @orange:      rgb(255, 128, 0);
 @purple:      #7b2353;
+@slate:       #52637b;
 @darkOrange:  #ff8853;
 @red:         #ae2b28;
 .orangeA() {
@@ -536,7 +538,7 @@ body.admin-bar .navbar-fixed-top { top: 28px; }
         }
         h2 {
             color: #292929;
-            margin: 25px 10px 15px;
+            margin: 0 0 15px;
             font-size: 18px;
             a {
                 color: #292929;
@@ -808,6 +810,13 @@ body.home {
             .text {
                 float: left;
                 width: 400px;
+                p {
+                    a,a:visited {
+                        color: @white;
+                        border-bottom: 1px dotted @white;
+                    }
+                }
+
             }
             h2 {
                 font-size: 18px;

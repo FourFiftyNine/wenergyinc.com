@@ -53,12 +53,12 @@ body {
   line-height: 20px;
 }
 ::-moz-selection {
-  background: #5c5c5c;
+  background: #474747;
   color: #fff;
   text-shadow: none;
 }
 ::selection {
-  background: #5c5c5c;
+  background: #474747;
   color: #fff;
   text-shadow: none;
 }
@@ -284,7 +284,7 @@ td {
    ========================================================================== */
 body {
   background: #e9e7e7;
-  color: #5c5c5c;
+  color: #474747;
   font-size: 13px;
 }
 a,
@@ -312,7 +312,7 @@ h6 {
 }
 h1 {
   font-size: 26px;
-  color: #5c5c5c;
+  color: #474747;
 }
 h2 {
   font-size: 18px;
@@ -321,7 +321,7 @@ h2 {
    Inputs
    ========================================================================== */
 label {
-  color: #5c5c5c;
+  color: #474747;
 }
 input[type="text"],
 textarea {
@@ -673,7 +673,7 @@ body.admin-bar .navbar-fixed-top {
 }
 #content article h2 {
   color: #292929;
-  margin: 25px 10px 15px;
+  margin: 0 0 15px;
   font-size: 18px;
 }
 #content article h2 a {
@@ -718,7 +718,7 @@ body.admin-bar .navbar-fixed-top {
 }
 #content article footer time,
 #content article header time {
-  color: #5c5c5c;
+  color: #474747;
   float: left;
   font-size: 11px;
   margin-left: 12px;
@@ -726,7 +726,7 @@ body.admin-bar .navbar-fixed-top {
 }
 #content article footer .comments,
 #content article header .comments {
-  color: #5c5c5c;
+  color: #474747;
   float: left;
 }
 #content article footer .comments span,
@@ -763,7 +763,7 @@ body.admin-bar .navbar-fixed-top {
   margin-bottom: 15px;
 }
 #sidenav ul li a {
-  color: #5c5c5c;
+  color: #474747;
   display: block;
   font-size: 15px;
   height: 35px;
@@ -815,7 +815,7 @@ body.admin-bar .navbar-fixed-top {
   border-bottom: 1px solid #7b2353;
 }
 .block > header h1 a {
-  color: #5c5c5c;
+  color: #474747;
 }
 .block > header h1 a:hover {
   color: #7b2353;
@@ -947,6 +947,11 @@ body.home #featured-post #feature-excerpt .text {
   float: left;
   width: 400px;
 }
+body.home #featured-post #feature-excerpt .text p a,
+body.home #featured-post #feature-excerpt .text p a:visited {
+  color: #ffffff;
+  border-bottom: 1px dotted #ffffff;
+}
 body.home #featured-post #feature-excerpt h2 {
   font-size: 18px;
   margin: 18px 30px;
@@ -1060,7 +1065,7 @@ body.home #news h2 {
   -moz-border-radius: 30px;
   border-radius: 30px;
   padding-left: 15px;
-  color: #5c5c5c;
+  color: #474747;
   font-size: 12px;
   height: 20px;
   width: 185px;
@@ -1425,7 +1430,7 @@ body.ir-contact .address nav {
 }
 body.contact .address h2,
 body.ir-contact .address h2 {
-  color: #5c5c5c;
+  color: #474747;
 }
 body.contact .wpcf7-form,
 body.ir-contact .wpcf7-form {
@@ -1580,10 +1585,10 @@ body.single-post #main {
   margin: 0 10px;
   font-size: 16px;
   text-transform: uppercase;
-  color: #5c5c5c;
+  color: #474747;
 }
 .page-header h1 a {
-  color: #5c5c5c;
+  color: #474747;
 }
 .page-header h1 a:hover {
   color: #7b2353;
@@ -1613,7 +1618,7 @@ body.single-post #content .post-meta {
   line-height: 35px;
   margin-bottom: 15px;
   font-size: 11px;
-  color: #5c5c5c;
+  color: #474747;
 }
 body.single-post #content .post-meta time {
   font-style: normal !important;
@@ -1713,7 +1718,7 @@ footer .menu > li a:visited {
 }
 footer .menu > li a:hover,
 footer .menu > li a:visited:hover {
-  color: #5c5c5c;
+  color: #474747;
 }
 footer .menu > li.menu-about {
   margin-left: 55px;
@@ -1783,7 +1788,7 @@ footer .copy {
 }
 footer .copy a,
 footer .copy a:visited {
-  color: #5c5c5c;
+  color: #474747;
 }
 footer .copy a.privacy-link,
 footer .copy a:visited.privacy-link {
