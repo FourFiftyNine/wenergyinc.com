@@ -53,12 +53,12 @@ body {
   line-height: 20px;
 }
 ::-moz-selection {
-  background: #474747;
+  background: #272727;
   color: #fff;
   text-shadow: none;
 }
 ::selection {
-  background: #474747;
+  background: #272727;
   color: #fff;
   text-shadow: none;
 }
@@ -284,7 +284,7 @@ td {
    ========================================================================== */
 body {
   background: #e9e7e7;
-  color: #474747;
+  color: #272727;
   font-size: 13px;
 }
 a,
@@ -312,7 +312,7 @@ h6 {
 }
 h1 {
   font-size: 26px;
-  color: #474747;
+  color: #272727;
 }
 h2 {
   font-size: 18px;
@@ -321,7 +321,7 @@ h2 {
    Inputs
    ========================================================================== */
 label {
-  color: #474747;
+  color: #272727;
 }
 input[type="text"],
 textarea {
@@ -721,7 +721,7 @@ body.admin-bar .navbar-fixed-top {
 }
 #content article footer time,
 #content article header time {
-  color: #474747;
+  color: #272727;
   float: left;
   font-size: 11px;
   margin-left: 12px;
@@ -729,7 +729,7 @@ body.admin-bar .navbar-fixed-top {
 }
 #content article footer .comments,
 #content article header .comments {
-  color: #474747;
+  color: #272727;
   float: left;
 }
 #content article footer .comments span,
@@ -766,7 +766,7 @@ body.admin-bar .navbar-fixed-top {
   margin-bottom: 15px;
 }
 #sidenav ul li a {
-  color: #474747;
+  color: #272727;
   display: block;
   font-size: 15px;
   height: 35px;
@@ -818,7 +818,7 @@ body.admin-bar .navbar-fixed-top {
   border-bottom: 1px solid #7b2353;
 }
 .block > header h1 a {
-  color: #474747;
+  color: #272727;
 }
 .block > header h1 a:hover {
   color: #7b2353;
@@ -1068,7 +1068,7 @@ body.home #news h2 {
   -moz-border-radius: 30px;
   border-radius: 30px;
   padding-left: 15px;
-  color: #474747;
+  color: #272727;
   font-size: 12px;
   height: 20px;
   width: 185px;
@@ -1433,7 +1433,7 @@ body.ir-contact .address nav {
 }
 body.contact .address h2,
 body.ir-contact .address h2 {
-  color: #474747;
+  color: #272727;
 }
 body.contact .wpcf7-form,
 body.ir-contact .wpcf7-form {
@@ -1588,10 +1588,10 @@ body.single-post #main {
   margin: 0 10px;
   font-size: 16px;
   text-transform: uppercase;
-  color: #474747;
+  color: #272727;
 }
 .page-header h1 a {
-  color: #474747;
+  color: #272727;
 }
 .page-header h1 a:hover {
   color: #7b2353;
@@ -1621,7 +1621,7 @@ body.single-post #content .post-meta {
   line-height: 35px;
   margin-bottom: 15px;
   font-size: 11px;
-  color: #474747;
+  color: #272727;
 }
 body.single-post #content .post-meta time {
   font-style: normal !important;
@@ -1721,7 +1721,7 @@ footer .menu > li a:visited {
 }
 footer .menu > li a:hover,
 footer .menu > li a:visited:hover {
-  color: #474747;
+  color: #272727;
 }
 footer .menu > li.menu-about {
   margin-left: 55px;
@@ -1791,7 +1791,7 @@ footer .copy {
 }
 footer .copy a,
 footer .copy a:visited {
-  color: #474747;
+  color: #272727;
 }
 footer .copy a.privacy-link,
 footer .copy a:visited.privacy-link {
