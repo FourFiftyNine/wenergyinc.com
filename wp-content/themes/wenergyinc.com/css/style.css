@@ -1626,6 +1626,12 @@ body.single-post #content .post-meta {
 body.single-post #content .post-meta time {
   font-style: normal !important;
 }
+body.single-post #content .post-featured-thumb {
+  margin: 0 20px 0 0;
+}
+body.single-post #content .post-content {
+  width: 400px;
+}
 body.single-post #content .addthis_toolbox {
   clear: both;
   margin-bottom: 20px;

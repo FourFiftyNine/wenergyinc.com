@@ -20,7 +20,7 @@
     <?php roots_post_inside_before(); ?>
         <?php if ( has_post_thumbnail() ) :  ?>
           <div class="post-featured-thumb">
-            <?php the_post_thumbnail(); ?>
+            <?php the_post_thumbnail('thumbnail'); ?>
           </div>
         <?php endif; ?>
         <?php $class = (has_post_thumbnail()) ? 'post-content' : 'post-content no-thumb'  ?>
