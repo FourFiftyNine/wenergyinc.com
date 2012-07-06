@@ -924,6 +924,14 @@ section#news p a:hover,
 section#recent-updates p a:hover {
   text-decoration: underline;
 }
+section#recent-updates article header h2 {
+  margin-bottom: 0;
+}
+section#recent-updates article header time {
+  margin: 5px 15px;
+  font-size: 11px;
+  float: none;
+}
 .lt-ie9 .block header h2 {
   font-size: 17px;
 }

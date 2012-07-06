@@ -20,6 +20,8 @@
         <article>
           <header>
             <h2><a href="<?php echo get_permalink($post->ID) ?>"><?php echo $post->post_title; ?></a></h2>
+            <time datetime="<?php the_time('Y-m-d')?>"><?php the_time('n/j/y') ?>
+            </time>
           </header>
           <?php /* TODO 
           <div class="clearfix">
