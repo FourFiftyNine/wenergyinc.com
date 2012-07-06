@@ -727,6 +727,7 @@ body.admin-bar .navbar-fixed-top {
   border: 1px solid #e0e0e0;
 }
 #content article .caption p {
+  line-height: 11px;
   margin: 0;
 }
 #content article footer {
