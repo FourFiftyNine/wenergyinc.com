@@ -925,10 +925,11 @@ section#recent-updates p a:hover {
   text-decoration: underline;
 }
 section#recent-updates article header h2 {
+  margin-bottom: 0;
   font-size: 16px;
 }
 section#recent-updates article header time {
-  margin-left: 5px;
+  margin: 5px 15px;
   font-size: 11px;
   float: none;
 }

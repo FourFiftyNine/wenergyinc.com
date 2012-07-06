@@ -15,8 +15,9 @@
           <h1 class="entry-title"><?php the_title(); ?></h1>
           <div class="post-meta clearfix">
              <a href="<?php comments_link(); ?>" class="comments">
-               <?php comments_number( '<span>0</span> Comments', '<span>1</span> Comment', '% Comments' ); ?>&nbsp;&nbsp;&nbsp;&nbsp;
-             </a>|<time datetime="<?php the_time('Y-m-d')?>"><?php the_time('n/j/y') ?>
+               <?php comments_number( '<span>0</span> Comments', '<span>1</span> Comment', '% Comments' ); ?>&nbsp;&nbsp;&nbsp;&nbsp;|
+             </a>
+            <time datetime="<?php the_time('Y-m-d')?>"><?php the_time('n/j/y') ?>
             </time>
           </div>
           <!-- AddThis Button BEGIN -->
