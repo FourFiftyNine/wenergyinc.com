@@ -874,29 +874,36 @@ body.admin-bar .navbar-fixed-top {
 #bottom .block:first-child {
   margin-right: 26px;
 }
-section#press-releases h2,
-section#news h2 {
+section#press-releases h2 {
   margin: 15px;
 }
-section#press-releases p,
-section#news p {
+section#press-releases p {
   margin: 15px;
 }
 section#press-releases p a,
-section#news p a,
-section#press-releases p a:visited,
-section#news p a:visited {
+section#press-releases p a:visited {
   color: #7b2353;
 }
-section#press-releases p a:hover,
-section#news p a:hover {
+section#press-releases p a:hover {
   text-decoration: underline;
 }
-section#news h2 {
+section#news h2,
+section#recent-updates h2 {
   margin: 12px 15px;
 }
-section#news p {
+section#news p,
+section#recent-updates p {
   margin: 5px 15px 15px;
+}
+section#news p a,
+section#recent-updates p a,
+section#news p a:visited,
+section#recent-updates p a:visited {
+  color: #7b2353;
+}
+section#news p a:hover,
+section#recent-updates p a:hover {
+  text-decoration: underline;
 }
 .lt-ie9 .block header h2 {
   font-size: 17px;
@@ -1616,36 +1623,39 @@ body.archive #main .post-content .entry-content {
 /* =============================================================================
    Individual Posts (Single.php)
    ========================================================================== */
-body.single-post #content .post-meta {
+body.single-post #main .post-meta {
   height: 35px;
   line-height: 35px;
   margin-bottom: 15px;
   font-size: 11px;
   color: #272727;
 }
-body.single-post #content .post-meta time {
+body.single-post #main .post-meta time {
   font-style: normal !important;
 }
-body.single-post #content .post-featured-thumb {
+body.single-post #main .post-featured-thumb {
   margin: 0 20px 0 0;
 }
-body.single-post #content .post-content {
+body.single-post #main .post-content {
   width: 400px;
 }
-body.single-post #content .addthis_toolbox {
+body.single-post #main .post-content.no-thumb {
+  padding-left: 0;
+}
+body.single-post #main .addthis_toolbox {
   clear: both;
   margin-bottom: 20px;
 }
-body.single-post #content h1.entry-title {
+body.single-post #main h1.entry-title {
   font-size: 18px;
   text-transform: none;
   margin: 0 0 15px;
   padding: 0;
 }
-body.single-post #content article {
+body.single-post #main article {
   padding: 25px;
 }
-body.single-post #content footer {
+body.single-post #main footer {
   display: none;
 }
 /* =============================================================================

@@ -4,7 +4,8 @@
     <article <?php post_class() ?> id="post-<?php the_ID(); ?>">
     <?php roots_post_inside_before(); ?>
       <header class="clearfix">
-        <?php if ( has_post_thumbnail() ) :  ?>
+        <?php $cat = get_the_category(); ?>
+        <?php if ( has_post_thumbnail() && $cat[0]->name != 'Recent Updates') :  ?>
           <div class="post-featured-thumb">
             <?php the_post_thumbnail('thumbnail'); ?>
           </div>

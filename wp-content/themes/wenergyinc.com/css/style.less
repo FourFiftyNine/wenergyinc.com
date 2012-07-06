@@ -723,8 +723,7 @@ body.admin-bar .navbar-fixed-top { top: 28px; }
         margin-right: 26px;
     }
 }
-section#press-releases,
-section#news {
+section#press-releases {
     h2 {
         margin: 15px;
     }
@@ -738,12 +737,19 @@ section#news {
         }
     }
 }
-section#news {
+section#news,
+section#recent-updates {
     h2 {
         margin: 12px 15px;
     }
     p {
         margin: 5px 15px 15px;
+        a,a:visited {
+            color: @purple;
+        }
+        a:hover {
+            text-decoration: underline;
+        }
     }
 }
 .lt-ie9 .block header h2 { font-size: 17px; }
@@ -1493,7 +1499,7 @@ body.archive #main {
    Individual Posts (Single.php)
    ========================================================================== */
 body.single-post {
-    #content {
+    #main {
         .post-meta {
             height: 35px;
             line-height: 35px;
@@ -1509,6 +1515,9 @@ body.single-post {
         }
         .post-content {
             width: 400px;
+            &.no-thumb {
+                padding-left: 0;
+            }
         }
         .addthis_toolbox {
             clear: both;
