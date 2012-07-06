@@ -926,6 +926,7 @@ section#recent-updates p a:hover {
 }
 section#recent-updates article header h2 {
   margin-bottom: 0;
+  font-size: 16px;
 }
 section#recent-updates article header time {
   margin: 5px 15px;
