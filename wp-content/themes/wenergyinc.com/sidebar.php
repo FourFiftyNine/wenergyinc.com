@@ -19,9 +19,9 @@
       <?php foreach($pressReleases as $post) : setup_postdata($post); ?>
         <article>
           <header>
-            <h2><a href="<?php echo get_permalink($post->ID) ?>"><?php echo $post->post_title; ?></a></h2>
-            <time datetime="<?php the_time('Y-m-d')?>"><?php the_time('n/j/y') ?>
-            </time>
+            <h2><a href="<?php echo get_permalink($post->ID) ?>"><?php echo $post->post_title; ?></a> | <time datetime="<?php the_time('Y-m-d')?>"><?php the_time('n/j/y') ?>
+            </time></h2>
+
           </header>
           <?php /* TODO 
           <div class="clearfix">
