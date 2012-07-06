@@ -9,7 +9,7 @@
     $category = get_category_by_slug('recent-updates'); 
     $id = $category->term_id;
 
-    $args = array( 'numberposts' => 2, 'category' => $id);
+    $args = array( 'numberposts' => 3, 'category' => $id);
     $pressReleases = get_posts( $args );
   ?>
   <section id="<?php echo $category->slug ?>" class="block">
