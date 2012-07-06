@@ -1658,6 +1658,7 @@ body.single-post #main .post-content {
   width: 400px;
 }
 body.single-post #main .post-content.no-thumb {
+  width: 100%;
   padding-left: 0;
 }
 body.single-post #main .addthis_toolbox {
