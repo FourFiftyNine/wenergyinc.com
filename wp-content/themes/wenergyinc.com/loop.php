@@ -54,8 +54,8 @@
             <?php if($categories[0]->category_nicename == 'news'): ?>
               <p class="author"><strong>source: </strong><?php echo get_the_author(); ?></p>
             <?php endif; ?>
-            <a class="read-more" href="<?php get_permalink() ?>"><span class="divider">|&nbsp;&nbsp;&nbsp;&nbsp;</span>Read Post <span class="arrow"></span></a>
-            <?php $tags = get_the_tags(); if ($tags) { ?><p><?php the_tags(); ?></p><?php } ?>
+            <a class="read-more" href="<?php get_permalink() ?>"><span class="divider">|&nbsp;&nbsp;&nbsp;&nbsp;</span>Read More <span class="arrow"></span></a>
+            <?php/* $tags = get_the_tags(); if ($tags) { ?><p><?php the_tags(); ?></p><?php } */ ?>
           </footer>
       </div>
     </article>

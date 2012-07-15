@@ -14,7 +14,7 @@
   ?>
   <section id="<?php echo $category->slug ?>" class="block">
       <header>
-        <h1><a href="/<?php echo $category->slug ?>"><strong>WE</strong>&nbsp;&nbsp;RECENT UPDATES</a></h1>
+        <h1><a href="/<?php echo $category->slug ?>"><strong>WE</strong>&nbsp;&nbsp;THIS JUST IN...</a></h1>
       </header>
       <?php foreach($pressReleases as $post) : setup_postdata($post); ?>
         <article>
