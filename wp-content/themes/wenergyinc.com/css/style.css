@@ -1701,7 +1701,7 @@ ol.commentlist img.avatar {
   margin-right: 10px;
 }
 #comments time {
-  margin: 0 12px;
+  margin: 0 12px 0 0;
 }
 #commentform label {
   display: block;
