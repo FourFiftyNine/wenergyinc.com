@@ -67,7 +67,7 @@ get_header(); ?>
                <?php my_excerpt(40); ?>
                <footer class="clearfix">
                  <a href="<?php comments_link(); ?>" class="comments">
-                   <?php comments_number( '<span>0</span> Comments', '<span>1</span> Comment', '% Comments' ); ?>&nbsp;&nbsp;&nbsp;&nbsp;|
+                   <?php comments_number( '<span>0</span> Comments', '<span>1</span> Comment', '<span>%</span> Comments' ); ?>&nbsp;&nbsp;&nbsp;&nbsp;|
                  </a>
                 <time datetime="<?php the_time('Y-m-d')?>"><?php the_time('n/j/y') ?>&nbsp;&nbsp;&nbsp;&nbsp;|
                 </time>
