@@ -23,7 +23,7 @@ get_header(); ?>
        
 
         <div id="featured-post">
-          <img id="welcome-image" src="<?php echo get_template_directory_uri() . 'img/home.jpg' ?>" width="628" alt="" />
+          <?php echo the_post_thumbnail(array(630, 400), array('id' => 'welcome-image')) ?>
           <div id="feature-excerpt">
             <div class="text">
               <h2><a href="<?php echo get_permalink() ?>"><?php the_title(); ?></a></h2>
