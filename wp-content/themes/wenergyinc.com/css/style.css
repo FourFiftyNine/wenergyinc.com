@@ -993,7 +993,7 @@ body.home #featured-post #feature-excerpt .text p a:visited {
 }
 body.home #featured-post #feature-excerpt h2 {
   font-size: 18px;
-  margin: 18px 30px;
+  margin: 18px 20px;
 }
 body.home #featured-post #feature-excerpt h2 a {
   color: #ffffff;
@@ -1005,7 +1005,7 @@ body.home #featured-post #feature-excerpt p {
 }
 body.home #featured-post #feature-excerpt .btn {
   position: relative;
-  top: 35px;
+  top: 17px;
   left: 10px;
 }
 body.home #blog {

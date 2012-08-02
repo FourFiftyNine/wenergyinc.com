@@ -1,10 +1,4 @@
 <aside id="sidebar">
-  <section id="stock-quote" class="block">
-      <header>
-        <h1><strong>STOCK</strong>&nbsp;&nbsp;QUOTE</h1>
-      </header>
-        <script src="http://charts.wikinvest.com/wikinvest/wikichart/javascript/scripts.php" type="text/javascript"></script><div id="wikichartContainer_7A3F02E4-9B87-8656-7E87-60B4B5860997"><div style="width: 100%; text-align: center; vertical-align: center; margin-top: 100px;"><a href="http://get.adobe.com/flashplayer/"><img src="http://cdn.wikinvest.com/wikinvest/images/adobe_flash_logo.gif" alt="Flash" style="border-width: 0px;"/><br/>Flash Player 9 or higher is required to view the chart<br/><strong>Click here to download Flash Player now</strong></a></div></div><script type="text/javascript">if (typeof(embedWikichart) != "undefined") {embedWikichart("http://charts.wikinvest.com/WikiChartMini.swf?wmode=transparent","wikichartContainer_7A3F02E4-9B87-8656-7E87-60B4B5860997","100%","200",{"showAnnotations":"true","startDate":"29-09-2011","ticker":"WGAS","liveQuote":"true","endDate":"29-03-2012","embedCodeDate":"2012-3-29"},{});}</script><div style="font-size:9px;text-align:right;width:95%;font-family:Verdana"><a href="http://www.wikinvest.com/chart/WGAS" style="text-decoration:underline; color:#0000ee;">View the full WGAS chart</a> at <a href="http://www.wikinvest.com/">Wikinvest</a></div>
-  </section>
   <?php 
     $category = get_category_by_slug('recent-updates'); 
     $id = $category->term_id;
@@ -38,6 +32,12 @@
       <footer>
         <a  href="/<?php echo $category->slug ?>">View More</a>
       </footer>
+  </section>
+  <section id="stock-quote" class="block">
+      <header>
+        <h1><strong>STOCK</strong>&nbsp;&nbsp;QUOTE</h1>
+      </header>
+        <script src="http://charts.wikinvest.com/wikinvest/wikichart/javascript/scripts.php" type="text/javascript"></script><div id="wikichartContainer_7A3F02E4-9B87-8656-7E87-60B4B5860997"><div style="width: 100%; text-align: center; vertical-align: center; margin-top: 100px;"><a href="http://get.adobe.com/flashplayer/"><img src="http://cdn.wikinvest.com/wikinvest/images/adobe_flash_logo.gif" alt="Flash" style="border-width: 0px;"/><br/>Flash Player 9 or higher is required to view the chart<br/><strong>Click here to download Flash Player now</strong></a></div></div><script type="text/javascript">if (typeof(embedWikichart) != "undefined") {embedWikichart("http://charts.wikinvest.com/WikiChartMini.swf?wmode=transparent","wikichartContainer_7A3F02E4-9B87-8656-7E87-60B4B5860997","100%","200",{"showAnnotations":"true","startDate":"29-09-2011","ticker":"WGAS","liveQuote":"true","endDate":"29-03-2012","embedCodeDate":"2012-3-29"},{});}</script><div style="font-size:9px;text-align:right;width:95%;font-family:Verdana"><a href="http://www.wikinvest.com/chart/WGAS" style="text-decoration:underline; color:#0000ee;">View the full WGAS chart</a> at <a href="http://www.wikinvest.com/">Wikinvest</a></div>
   </section>
   <?php /*
   <section class="block" id="twitter">

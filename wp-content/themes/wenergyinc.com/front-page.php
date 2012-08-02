@@ -27,7 +27,9 @@ get_header(); ?>
           <div id="feature-excerpt">
             <div class="text">
               <h2><a href="<?php echo get_permalink() ?>"><?php the_title(); ?></a></h2>
+              <?php /* ?>
               <p><?php my_excerpt(12); ?> </p>
+              */ ?>
             </div>
             <a class="btn grey" href="<?php echo get_permalink() ?>" id="feature-link">Find Out <strong>More</strong><span class="arrow"></span></a>
           </div>
