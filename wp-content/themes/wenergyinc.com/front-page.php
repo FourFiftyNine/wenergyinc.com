@@ -51,15 +51,15 @@ get_header(); ?>
           <?php while (have_posts()) : the_post(); ?>
             <?php $class = (!$count) ? 'clearfix first' : 'last clearfix'; ?>
             <article id="post-<?php the_ID(); ?>" <?php post_class($class); ?>>
-              <?php 
+              <?php /*
               if ( has_post_thumbnail() ) : ?>
               <div class="post-featured-thumb">
 
                   <?php the_post_thumbnail(); ?>
 
               </div>
-              <?php
-              endif;
+              <?php 
+              endif; */
                ?>
               <?php $class = (has_post_thumbnail()) ? 'post-content' : 'post-content no-thumb'  ?>
               <div class="<?php echo $class ?>">
