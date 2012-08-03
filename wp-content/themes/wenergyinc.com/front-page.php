@@ -61,7 +61,7 @@ get_header(); ?>
               <?php 
               endif; */
                ?>
-              <?php $class = (has_post_thumbnail()) ? 'post-content' : 'post-content no-thumb'  ?>
+              <?php $class = (/*has_post_thumbnail()*/false) ? 'post-content' : 'post-content no-thumb'  ?>
               <div class="<?php echo $class ?>">
                <header>
                  <h2><a href="<?php echo get_permalink() ?>"><?php the_title(); ?></a></h2>
