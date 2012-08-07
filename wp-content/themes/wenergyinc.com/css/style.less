@@ -152,10 +152,15 @@ h2 {
 label {
     color: @darkGrey;
 }
-input[type="text"], textarea {
+input[type="text"], 
+input[type="email"], 
+input[type="url"], 
+textarea {
     border: 1px solid @lighterGrey;
 }
-input[type="text"] {
+input[type="text"],
+input[type="email"], 
+input[type="url"] {
     line-height: 20px;
     height: 20px;
 }
@@ -1579,20 +1584,67 @@ body.single-post {
 
 #comments, #respond, #submit { 
     clear: both; display: block; 
+}
+#respond {
+    padding: 20px;
 
+    > h3 {
+        margin-top: 0;
+    }
 }
 ol.commentlist img.avatar { float: left; margin-right: 10px; }
-#comments time {
-    margin: 0 12px 0 0;
+#comments {
+    > h3 {
+        border-top: 3px solid @purple;
+        border-bottom: 3px solid @purple;
+        padding: 10px 0;
+    }
+
+    .commentlist {
+        padding-left: 0;
+        > li.comment {
+            border-bottom: 1px solid darken(@grey, 9%);
+        }
+    }
+    li.comment {
+        list-style: none;
+        cite {
+            float: left;
+            color: purple;
+            font-weight: bold;
+        }
+        time {
+            float: left;
+        }
+        section.comment {
+            clear: both;
+        }
+        .comment-reply-link {
+            color: @purple;
+            &:hover {
+                font-weight: bold;
+            }
+        }
+        &.byuser > article {
+            background: #ffffff;
+        }
+        .children {
+            margin-bottom: 30px;
+            li article {
+                border-left: 3px solid @purple;
+            }
+        }
+    }
 }
-#commentform {
+#respond {
     label {
+        margin-bottom: 3px;
+        font-weight: bold;
         display: block;
     }
 
     input {
         display: block;
-        margin-bottom: 15px;
     }
     textarea {
         height: 100px;
@@ -1602,7 +1654,12 @@ ol.commentlist img.avatar { float: left; margin-right: 10px; }
     }
     input[type="submit"] {
         float: right;
-
+        .box-shadow(none);
+        padding: 0 20px;
+        font-weight: bold;
+        &:hover {
+            color: @purple;
+        }
     }
 }
 

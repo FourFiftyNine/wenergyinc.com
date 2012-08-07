@@ -324,10 +324,14 @@ label {
   color: #272727;
 }
 input[type="text"],
+input[type="email"],
+input[type="url"],
 textarea {
   border: 1px solid #e4e6e9;
 }
-input[type="text"] {
+input[type="text"],
+input[type="email"],
+input[type="url"] {
   line-height: 20px;
   height: 20px;
 }
@@ -1697,28 +1701,80 @@ body.single-post #main footer {
   clear: both;
   display: block;
 }
+#respond {
+  padding: 20px;
+}
+#respond > h3 {
+  margin-top: 0;
+}
 ol.commentlist img.avatar {
   float: left;
   margin-right: 10px;
 }
-#comments time {
-  margin: 0 12px 0 0;
+#comments > h3 {
+  border-top: 3px solid #7b2353;
+  border-bottom: 3px solid #7b2353;
+  padding: 10px 0;
 }
-#commentform label {
+#comments .commentlist {
+  padding-left: 0;
+}
+#comments .commentlist > li.comment {
+  border-bottom: 1px solid #c9c9c9;
+}
+#comments li.comment {
+  list-style: none;
+}
+#comments li.comment cite {
+  float: left;
+  color: purple;
+  font-weight: bold;
+}
+#comments li.comment time {
+  float: left;
+}
+#comments li.comment section.comment {
+  clear: both;
+}
+#comments li.comment .comment-reply-link {
+  color: #7b2353;
+}
+#comments li.comment .comment-reply-link:hover {
+  font-weight: bold;
+}
+#comments li.comment.byuser > article {
+  background: #ffffff;
+}
+#comments li.comment .children {
+  margin-bottom: 30px;
+}
+#comments li.comment .children li article {
+  border-left: 3px solid #7b2353;
+}
+#respond label {
+  margin-bottom: 3px;
+  font-weight: bold;
   display: block;
 }
-#commentform input {
+#respond input {
   display: block;
-  margin-bottom: 15px;
 }
-#commentform textarea {
+#respond textarea {
   height: 100px;
   margin-bottom: 15px;
   min-width: 100%;
   width: 100%;
 }
-#commentform input[type="submit"] {
+#respond input[type="submit"] {
   float: right;
+  -webkit-box-shadow: none;
+  -moz-box-shadow: none;
+  box-shadow: none;
+  padding: 0 20px;
+  font-weight: bold;
+}
+#respond input[type="submit"]:hover {
+  color: #7b2353;
 }
 /* =============================================================================
    Footer
