@@ -1,14 +1,14 @@
-=== Plugin Name ===
+# Plugin Name #
 Contributors: techotronic  
 Donate link: http://www.techotronic.de/donate/  
 Tags: jquery, colorbox, lightbox, images, pictures, photos, gallery, javascript, overlay, nextgen gallery, nextgen-gallery, image, picture, photo, media, slideshow, ngg, mu  
 Requires at least: 2.8  
-Tested up to: 3.4
-Stable tag: 4.4.1
+Tested up to: 3.4 
+Stable tag: 4.4.1 
 
 Adds Colorbox/Lightbox functionality to images, grouped by post or page. Works for WordPress and NextGEN galleries. Comes with different themes.
 
-== Description ==
+## Description ##
 
 A Colorbox/Lightbox plugin for Wordpress.
 
@@ -41,7 +41,7 @@ If you have questions or problems, feel free to write an entry at [the jQuery Co
 * French (`fr_FR`) by [Pierre Sudarovich](http://www.monblogamoua.fr/)
 * German (`de_DE`) by [Arne Franken](http://www.techotronic.de/)
 * Hebrew (`he_IL`) by [Tommy Gordon](http://www.TommyGordon.co.il)
-* Italian (`it_IT`) by Marco Chiesi
+* Italian (`it_IT`) by Erkinson
 * Latvian (`lv`) by Uldis Jansons
 * Malay (`ms_MY`) by [Saha-ini Ahmad Safian](http://www.inisahaini.com)
 * Polish (`pl_PL`) by Kornel Łysikowski
@@ -59,11 +59,11 @@ Is your native language missing?
 Translating the plugin is easy if you understand english and are fluent in another language.  
 I described in the [FAQ](http://wordpress.org/extend/plugins/jquery-colorbox/faq/) how the translation works.
 
-**Credits**  
+**Credits**
 Includes [ColorBox](http://jacklmoore.com/colorbox/) 1.3.19 jQuery plugin from Jack Moore.  
 The picture I used for the screenshots was designed by [Davide Vicariotto](http://wallpapers.vintage.it/)
 
-== Installation ==
+## Installation ##
 
 ###Upgrading From A Previous Version###
 
@@ -82,11 +82,11 @@ Do not forget to activate auto Colorbox if you want the Lightbox/Colorbox to wor
 
 **See Also:** ["Installing Plugins" article on the WP Codex](http://codex.wordpress.org/Managing_Plugins#Installing_Plugins)
 
-== Screenshots ==
+## Screenshots ##
 
 [Please visit my site for screenshots](http://www.techotronic.de/plugins/jquery-colorbox/theme-screenshots/).
 
-== Frequently Asked Questions ==
+## Frequently Asked Questions ##
 * I installed your plugin, but when I click on a thumbnail, the original picture is loaded directly instead of in the Colorbox. What could be the problem?  
   Make sure that your theme uses the `wp_head();` function in the HTML head-tag.  
   I have seen problems where other plugins include their own versions of the jQuery library my plugin uses.  
@@ -137,7 +137,8 @@ Do not forget to activate auto Colorbox if you want the Lightbox/Colorbox to wor
   Feel free to open a thread at [the jQuery Colorbox WordPress.org forum](http://wordpress.org/tags/jquery-colorbox?forum_id=10).  
   I'll include new FAQs in newer versions.
 
-== Changelog ==
+## Changelog ##
+
 ### 4.4.1 (2012-07-19) ###
 * BUGFIX: using colorbox-link works again
 
