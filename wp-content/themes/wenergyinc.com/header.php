@@ -6,7 +6,7 @@
 <head>
   <meta charset="utf-8">
 
-  <title><?php wp_title('|', true, 'right'); bloginfo('name'); ?></title>
+  <title><?php wp_title('|', true, 'right');?></title>
   <!--[if lt IE 9]>
   <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
   <![endif]-->
