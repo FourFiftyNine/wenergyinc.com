@@ -565,7 +565,6 @@ header#banner {
 }
 #banner nav#nav-main .sub-menu {
   *zoom: 1;
-  *zoom: 1;
   background: #e0e0e0;
   -webkit-box-shadow: 2px 1px 4px rgba(0, 0, 0, 0.25);
   -moz-box-shadow: 2px 1px 4px rgba(0, 0, 0, 0.25);
@@ -627,8 +626,6 @@ body.admin-bar .navbar-fixed-top {
 #content {
   margin: 0 auto;
   width: 960px;
-  width: 960px;
-  *zoom: 1;
   *zoom: 1;
   padding-top: 35px;
 }
@@ -979,6 +976,7 @@ body.home #featured-post #welcome-image {
   width: 628px;
 }
 body.home #featured-post #feature-excerpt {
+  min-height: 75px;
   width: 628px;
   background: #55183a;
   background: rgba(85, 24, 58, 0.8);
@@ -1369,7 +1367,6 @@ body.sec-filings #main #page #the-content {
 }
 body.sec-filings #main #page #the-content .rsspaging {
   *zoom: 1;
-  *zoom: 1;
   padding: 10px 30px 20px;
 }
 body.sec-filings #main #page #the-content .rsspaging:before,
@@ -1477,7 +1474,6 @@ body.ir-contact .address h2 {
 }
 body.contact .wpcf7-form,
 body.ir-contact .wpcf7-form {
-  *zoom: 1;
   *zoom: 1;
 }
 body.contact .wpcf7-form:before,
