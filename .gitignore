@@ -33,6 +33,8 @@ wp-content/plugins/*
 !wp-content/plugins/feedwordpress/
 !wp-content/plugins/jquery-colorbox/
 !wp-content/plugins/no-category-base-wpml/
+!wp-content/plugins/w3-total-cache/
+!wp-content/plugins/wordpress-seo/
 #!wp-content/plugins/rss-in-page/
 
 

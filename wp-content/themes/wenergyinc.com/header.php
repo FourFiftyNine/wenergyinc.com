@@ -17,7 +17,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=.75">
   <?php endif; ?>
   <?php roots_stylesheets(); ?>
-  <link href='<?php echo get_template_directory_uri(); ?>/css/fonts/fonts.css' rel='stylesheet' type='text/css'>
+  <!-- <link href='<?php echo get_template_directory_uri(); ?>/css/fonts/fonts.css' rel='stylesheet' type='text/css'> -->
 
   <link rel="alternate" type="application/rss+xml" title="<?php bloginfo('name'); ?> Feed" href="<?php echo home_url(); ?>/feed/">
 
