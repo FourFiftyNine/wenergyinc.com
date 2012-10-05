@@ -1687,7 +1687,7 @@ body.single-post #main .post-content.no-thumb {
 }
 body.single-post #main .addthis_toolbox {
   clear: both;
-  margin-bottom: 20px;
+  margin-bottom: 0px;
 }
 body.single-post #main h1.entry-title {
   font-size: 18px;
@@ -1697,6 +1697,15 @@ body.single-post #main h1.entry-title {
 }
 body.single-post #main article {
   padding: 25px;
+}
+body.single-post #main article .entry-content a,
+body.single-post #main article .entry-content a:visited {
+  color: #7b2353;
+  font-weight: bold;
+  text-decoration: underline;
+}
+body.single-post #main article .entry-content a:hover {
+  text-decoration: none;
 }
 body.single-post #main footer {
   display: none;

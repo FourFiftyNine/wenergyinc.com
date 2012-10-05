@@ -1576,7 +1576,7 @@ body.single-post {
         }
         .addthis_toolbox {
             clear: both;
-            margin-bottom: 20px;
+            margin-bottom: 0px;
         }
 
         h1.entry-title {
@@ -1588,6 +1588,17 @@ body.single-post {
 
         article {
             padding: 25px;
+            .entry-content {
+                a, a:visited {
+                    color: @purple;
+                    font-weight: bold;
+                    text-decoration: underline;
+
+                }
+                a:hover {
+                    text-decoration: none;
+                }
+            }
         }
         footer {
             display: none;
